@@ -138,18 +138,18 @@ export default function Collection() {
         )}
         {/* </PageHeader> */}
         <Section>
-          <SortFilter
+          {/* <SortFilter
             filters={collection.products.filters}
             appliedFilters={appliedFilters}
             collections={collections}
-          >
-            <ProductGrid
-              key={collection.id}
-              collection={collection}
-              url={`/collections/${collection.handle}`}
-              data-test="product-grid"
-            />
-          </SortFilter>
+          > */}
+          <ProductGrid
+            key={collection.id}
+            collection={collection}
+            url={`/collections/${collection.handle}`}
+            data-test="product-grid"
+          />
+          {/* </SortFilter> */}
           {/* <img
           src="/images/shop-page.png"
           alt="shop-page"

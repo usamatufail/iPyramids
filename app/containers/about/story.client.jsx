@@ -1,4 +1,4 @@
-import {Animate, Zoom} from '~/components';
+import {Animate, Link, Zoom} from '~/components';
 
 const data = [
   {
@@ -20,12 +20,11 @@ export const OurStory = () => {
         <div className="grid md:grid-cols-2 m-auto xl:px-[130px] gap-[30px]">
           {data.map((el) => {
             return (
-              <Card
-                img1={el.img1}
-                img2={el.img2}
-                heading={el.heading}
-                key={el.heading}
-              />
+              <div key={el.heading}>
+                <Link to="/collections/all-products">
+                  <Card img1={el.img1} img2={el.img2} heading={el.heading} />
+                </Link>
+              </div>
             );
           })}
         </div>

@@ -1,4 +1,4 @@
-import {Animate, CustomButton, Zoom} from '~/components';
+import {Animate, Zoom} from '~/components';
 
 const data = [
   {
@@ -27,9 +27,7 @@ export const Features = () => {
           Coherence Within The Mind
         </h1>
       </Animate>
-      <Animate>
-        <CustomButton />
-      </Animate>
+      <Animate>{/* <CustomButton /> */}</Animate>
       <Zoom>
         <div className="grid grid-cols-2 md:grid-cols-4 justify-center items-center gap-[50px] mt-[30px]">
           {data.map((data) => {

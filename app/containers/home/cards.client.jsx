@@ -1,4 +1,4 @@
-import {Animate, CustomButton, Zoom} from '~/components';
+import {Animate, CustomButton, Link, Zoom} from '~/components';
 
 export const Cards = () => {
   return (
@@ -8,22 +8,34 @@ export const Cards = () => {
           <Card1 image="/home/card1.png" heading="Star Gate 4.0" />
         </Zoom>
         <Zoom>
-          <Card2 image="/home/card3.png" heading="6 Sided Orgone Pyramid" />
+          <Card2
+            image="/home/card3.png"
+            heading="6 Sided Orgone Pyramid"
+            to="/products/6-sided-orgone-pyramid"
+          />
         </Zoom>
       </div>
       <div className="grid grid-cols-2 gap-[5px] md:gap-[10px] justify-center items-center w-full h-full">
         <Zoom>
-          <Card1 image="/home/card2.png" heading="ARC" />
+          <Card1
+            image="/home/card2.png"
+            heading="ARC"
+            to="/products/accelerated-rejuvenation-chamber-arc-6"
+          />
         </Zoom>
         <Zoom>
-          <Card2 image="/home/card4.png" heading="Custom Travel Case" />
+          <Card2
+            image="/home/card4.png"
+            heading="Custom Travel Case"
+            to="/products/case-only-custom-travel-case-for-itorus-1-and-2"
+          />
         </Zoom>
       </div>
     </div>
   );
 };
 
-const Card1 = ({image, heading}) => {
+const Card1 = ({image, heading, to}) => {
   return (
     <div className="flex flex-col items-center justify-center gap-[17px] bg-[black] px-[10px] md:px-[50px] py-[20px] md:py-[32px] h-[270px] md:h-[unset]">
       <Zoom>
@@ -36,14 +48,16 @@ const Card1 = ({image, heading}) => {
           </h1>
         </Animate>
         <Animate>
-          <CustomButton text="Buy" />
+          <Link to={to}>
+            <CustomButton text="Buy" />
+          </Link>
         </Animate>
       </div>
     </div>
   );
 };
 
-const Card2 = ({image, heading}) => {
+const Card2 = ({image, heading, to}) => {
   return (
     <div className="flex flex-col items-center justify-center gap-[17px] bg-[#f2f2f2] px-[10px] md:px-[50px] py-[20px] md:py-[32px] h-[270px] md:h-[unset]">
       <div className="flex flex-col gap-[7px] justify-center items-center">
@@ -53,7 +67,9 @@ const Card2 = ({image, heading}) => {
           </h1>
         </Animate>
         <Animate>
-          <CustomButton text="Buy" />
+          <Link to={to}>
+            <CustomButton text="Buy" />
+          </Link>
         </Animate>
       </div>
       <Zoom>

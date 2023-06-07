@@ -1,4 +1,4 @@
-import {Animate, CustomButton, Zoom} from '~/components';
+import {Animate, CustomButton, Link, Zoom} from '~/components';
 
 export const Banner = () => {
   return (
@@ -11,7 +11,9 @@ export const Banner = () => {
           </h1>
         </Animate>
         <Animate>
-          <CustomButton text="iToirs" />
+          <Link to="/collections/itorus">
+            <CustomButton text="iTorus" />
+          </Link>
         </Animate>
         <Zoom>
           <img src="/home/circles.png" alt="diamonds" />

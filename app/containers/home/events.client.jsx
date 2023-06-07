@@ -1,4 +1,4 @@
-import {Animate, Zoom} from '~/components';
+import {Animate, Link, Zoom} from '~/components';
 
 export const Event = () => {
   return (
@@ -9,7 +9,9 @@ export const Event = () => {
         </h1>
       </Animate>
       <Zoom>
-        <img src="/home/event-cal.png" alt="Event Calender" />
+        <Link to="/calendar">
+          <img src="/home/event-cal.png" alt="Event Calender" />
+        </Link>
       </Zoom>
       <Animate>
         <p className="text-[16px] md:text-[20px] font-[400] text-white text-center block md:hidden">

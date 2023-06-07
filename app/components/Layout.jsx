@@ -223,10 +223,10 @@ function MenuMobileNav({menu, onClose}) {
       <Link to="/information" onClick={onClose}>
         <span className="text-[14px] font-[400]">Information</span>
       </Link>
-      <Link to="/information" onClick={onClose}>
+      <Link to="/collections/all-products" onClick={onClose}>
         <span className="text-[14px] font-[400]">Store</span>
       </Link>
-      <Link to="" onClick={onClose}>
+      <Link to="/collections/galactic" onClick={onClose}>
         <span className="text-[14px] font-[400]">Galactic Alliances</span>
       </Link>
       <Link to="/calendar" onClick={onClose}>
@@ -341,7 +341,7 @@ function DesktopHeader({isHome, openCart, openMenu}) {
             </Link>
           </Zoom>
           <Zoom>
-            <Link to="">
+            <Link to="/collections/galactic">
               <span className="text-[12px]">Galactic Alliances</span>
             </Link>
           </Zoom>
@@ -382,18 +382,18 @@ function DesktopHeader({isHome, openCart, openMenu}) {
         {/* </Zoom> */}
       </header>
       {visible ? (
-        <div className="bg-white py-[10px] w-[100%] px-[200px] flex gap-[50px] absolute top-[80px] transition-all">
-          <Link to="/" onClick={handleToggle}>
+        <div className="bg-white py-[10px] w-[100%] px-[200px] flex justify-center items-center m-auto gap-[50px] absolute top-[80px] transition-all">
+          <Link to="/collections/itorus" onClick={handleToggle}>
             <div className="flex gap-[8px] items-center hover:bg-[#EDB311] hover:rounded-[30px] px-[24px] py-[12px] transition-all hover:transition-all">
               <img
                 src="/svg/itoris.svg"
                 className="w-[30px] h-[30px]"
                 alt="icon"
               />
-              <h1 className="text-[12px] font-[500] text-black">iToris</h1>
+              <h1 className="text-[12px] font-[500] text-black">iTorus</h1>
             </div>
           </Link>
-          <Link to="/" onClick={handleToggle}>
+          <Link to="/collections/ipyramids" onClick={handleToggle}>
             <div className="flex gap-[8px] items-center hover:bg-[#EDB311] hover:rounded-[30px] px-[24px] py-[12px] transition-all hover:transition-all">
               <img
                 src="/svg/ipyramid.svg"
@@ -403,7 +403,7 @@ function DesktopHeader({isHome, openCart, openMenu}) {
               <h1 className="text-[12px] font-[500] text-black">iPyramids</h1>
             </div>
           </Link>
-          <Link to="/">
+          <Link to="/collections/arc" onClick={handleToggle}>
             <div className="flex gap-[8px] hover:bg-[#EDB311] items-center hover:rounded-[30px] px-[24px] py-[12px] transition-all hover:transition-all">
               <img
                 src="/svg/arc.svg"
@@ -413,7 +413,7 @@ function DesktopHeader({isHome, openCart, openMenu}) {
               <h1 className="text-[12px] font-[500] text-black">ARC</h1>
             </div>
           </Link>
-          <Link to="/">
+          <Link to="/collections/wearables" onClick={handleToggle}>
             <div className="flex gap-[8px] hover:bg-[#EDB311] items-center hover:rounded-[30px] px-[24px] py-[12px] transition-all hover:transition-all">
               <img
                 src="/svg/werable.svg"
@@ -423,7 +423,7 @@ function DesktopHeader({isHome, openCart, openMenu}) {
               <h1 className="text-[12px] font-[500] text-black">Werable</h1>
             </div>
           </Link>
-          <Link to="/">
+          <Link to="/collections/orgonite" onClick={handleToggle}>
             <div className="flex gap-[8px] hover:bg-[#EDB311] items-center hover:rounded-[30px] px-[24px] py-[12px] transition-all hover:transition-all">
               <img
                 src="/svg/orgonite.svg"
@@ -433,7 +433,7 @@ function DesktopHeader({isHome, openCart, openMenu}) {
               <h1 className="text-[12px] font-[500] text-black">Orgonite</h1>
             </div>
           </Link>
-          <Link to="/">
+          <Link to="/collections/accessories" onClick={handleToggle}>
             <div className="flex gap-[8px] hover:bg-[#EDB311] items-center hover:rounded-[30px] px-[24px] py-[12px] transition-all hover:transition-all">
               <img
                 src="/svg/access.svg"
@@ -512,10 +512,10 @@ import {Fragment} from 'react';
 const quickLinks = {
   links: [
     {title: 'Home', url: '/'},
-    {title: 'Our Location', url: '/about'},
-    {title: 'Store', url: '/collections/all-designs'},
-    {title: 'Search', url: '/collections/all-designs'},
-    {title: 'Calender', url: '/collections/all-designs'},
+    {title: 'Our Location', url: '/location'},
+    {title: 'Store', url: '/collections/all-products'},
+    // {title: 'Search', url: '/collections/all-designs'},
+    {title: 'Calender', url: '/calendar'},
   ],
 };
 

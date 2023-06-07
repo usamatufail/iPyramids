@@ -1,5 +1,7 @@
 import {useState} from 'react';
 import {Animate, Zoom} from './Animate';
+import {Link} from './Link';
+import {CustomButton} from './CustomButton';
 
 export const Subscribe = () => {
   const [email, setEmail] = useState('');
@@ -20,12 +22,15 @@ export const Subscribe = () => {
         </Animate>
         {/* Input */}
         <Zoom>
-          <input
+          <Link to="/account/register">
+            <CustomButton text="Subscribe" />
+          </Link>
+          {/* <input
             className="h-[48px] text-black focus-visible:outline-none rounded-[50px] bg-white w-[300px] px-[30px] placeholder:text-[#242424] placeholder:text-opacity-50 xl:w-[450px] text-[16px] font-[400]"
             placeholder="Your Email"
             onChange={(e) => setEmail(e?.target?.value)}
             value={email}
-          />
+          /> */}
         </Zoom>
       </div>
       <div className="flex justify-center">
