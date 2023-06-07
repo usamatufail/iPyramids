@@ -1,0 +1,26 @@
+/* @font-face {
+  font-family: 'SFProDisplay';
+  font-display: swap;
+  font-weight: 400;
+  src: url('./fonts/SFPRODISPLAYREGULAR.OTF') format('OTF');
+} */
+@font-face {
+  font-family: 'IBMPlexSerif';
+  font-display: swap;
+  font-weight: 400;
+  font-style: italic;
+  src: url('./fonts/IBMPlexSerif-TextItalic.woff2') format('woff2');
+}
+
+/* @font-face {
+  font-family: 'SFProDisplay';
+  font-display: swap;
+  font-weight: 500;
+  src: url('./fonts/SFPRODISPLAYMEDIUM.OTF') format('OTF');
+}
+@font-face {
+  font-family: 'SFProDisplay';
+  font-display: swap;
+  font-weight: 700;
+  src: url('./fonts/SFPRODISPLAYBOLD.OTF') format('OTF');
+} */
