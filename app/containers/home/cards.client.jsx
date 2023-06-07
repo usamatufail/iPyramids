@@ -5,7 +5,11 @@ export const Cards = () => {
     <div className="flex flex-col items-center gap-[8px] justify-center md:py-[8px] bg-white">
       <div className="grid grid-cols-2 gap-[5px] md:gap-[10px] justify-center items-center w-full h-full">
         <Zoom>
-          <Card1 image="/home/card1.png" heading="Star Gate 4.0" />
+          <Card1
+            image="/home/card1.png"
+            heading="Star Gate 4.0"
+            to="/products/star-gate-4-0"
+          />
         </Zoom>
         <Zoom>
           <Card2
@@ -19,7 +23,7 @@ export const Cards = () => {
         <Zoom>
           <Card1
             image="/home/card2.png"
-            heading="ARC"
+            heading="Accelerated Rejuvenation Chamber (ARC-6)"
             to="/products/accelerated-rejuvenation-chamber-arc-6"
           />
         </Zoom>
