@@ -19,7 +19,7 @@ export const Banner = () => {
           <img
             src="/home/circles.png"
             alt="diamonds"
-            className="max-w-[900px] "
+            className="w-full md:max-w-[900px]"
           />
         </Zoom>
       </div>
