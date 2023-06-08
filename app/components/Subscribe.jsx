@@ -3,7 +3,6 @@ import {Link} from './Link';
 import {CustomButton} from './CustomButton';
 
 export const Subscribe = () => {
-  // const [email, setEmail] = useState('');
   return (
     <section className="grid min-h-[400px] md:grid-cols-2 gap-[50px] items-center bg-[url('https://cdn.shopify.com/s/files/1/0771/2768/0277/files/pexels-philippe-donn-1169754_1.jpg')] px-[20px] bg-cover relative bg-center bg-no-repeat py-[40px]">
       <div className="h-full w-full bg-[rgba(0,0,0,0.5)] absolute top-0 opacity-70 z-10" />
@@ -26,12 +25,6 @@ export const Subscribe = () => {
           <Link to="/account/register">
             <CustomButton text="Subscribe" />
           </Link>
-          {/* <input
-            className="h-[48px] text-black focus-visible:outline-none rounded-[50px] bg-white w-[300px] px-[30px] placeholder:text-[#242424] placeholder:text-opacity-50 xl:w-[450px] text-[16px] font-[400]"
-            placeholder="Your Email"
-            onChange={(e) => setEmail(e?.target?.value)}
-            value={email}
-          /> */}
         </Zoom>
       </div>
       <div className="flex justify-center relative z-20">

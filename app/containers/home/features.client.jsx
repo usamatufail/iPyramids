@@ -27,7 +27,6 @@ export const Features = () => {
           Coherence Within The Mind
         </h1>
       </Animate>
-      <Animate>{/* <CustomButton /> */}</Animate>
       <Zoom>
         <div className="grid grid-cols-4 justify-center items-center gap-[15px] md:gap-[50px] mt-[30px]">
           {data.map((data) => {
@@ -50,8 +49,7 @@ const Card = ({text, src}) => {
         <img
           src={src}
           alt={text}
-          className="w-[50px] h-[50px] md:w-[70px] md:h-[7
-            0px]"
+          className="w-[50px] h-[50px] md:w-[70px] md:h-[70px]"
         />
         <h1 className="text-[11px] md:text-[16px] font-[600] md:font-[700] text-white text-center md:max-w-[180px] max-h-[40px]">
           {text}
