@@ -2,8 +2,8 @@ import {Animate, CustomButton, Link, Zoom} from '~/components';
 
 export const Cards = () => {
   return (
-    <div className="flex flex-col items-center gap-[5px] justify-center md:py-[8px] bg-white">
-      <div className="grid grid-cols-2 gap-[5px] md:gap-[10px] justify-center items-center w-full h-full">
+    <div className="flex flex-col items-center gap-[5px] justify-center bg-white">
+      <div className="grid grid-cols-2 gap-[5px] md:gap-[10px] p-[5px] md:p-[10px] justify-center items-center w-full">
         <Zoom>
           <Card1
             image="/home/card1.png"
@@ -18,8 +18,6 @@ export const Cards = () => {
             to="/products/6-sided-orgone-pyramid"
           />
         </Zoom>
-      </div>
-      <div className="grid grid-cols-2 gap-[5px] md:gap-[10px] justify-center items-center w-full h-full">
         <Zoom>
           <Card1
             image="/home/card2.png"
@@ -35,6 +33,9 @@ export const Cards = () => {
           />
         </Zoom>
       </div>
+      {/* <div className="grid grid-cols-2 gap-[5px] md:gap-[10px] justify-center items-center w-full h-full">
+
+      </div> */}
     </div>
   );
 };
