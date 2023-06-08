@@ -70,7 +70,12 @@ export function Drawer({heading, open, onClose, openFrom = 'right', children}) {
                       <IconClose aria-label="Close panel" />
                     </button>
                   </header>
-                  {children}
+                  <div className="flex justify-center">
+                    <img src="/logo.png" alt="logo" className="w-[150px]" />
+                  </div>
+                  <div className="flex justify-center text-center">
+                    {children}
+                  </div>
                 </Dialog.Panel>
               </Transition.Child>
             </div>

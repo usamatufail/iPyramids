@@ -216,35 +216,35 @@ function MenuMobileNav({menu, onClose}) {
         );
       })}
       <Link to="/location" onClick={onClose}>
-        <span className="text-[14px] font-[400]">Our Location</span>
+        <span className="text-[16px] text-center font-[400]">Our Location</span>
       </Link>
       <Link to="/information" onClick={onClose}>
-        <span className="text-[14px] font-[400]">Information</span>
+        <span className="text-[16px] font-[400]">Information</span>
       </Link>
       <Link to="/collections/all-products" onClick={onClose}>
-        <span className="text-[14px] font-[400]">Store</span>
+        <span className="text-[16px] font-[400]">Store</span>
       </Link>
       <Link to="/collections/galactic" onClick={onClose}>
-        <span className="text-[14px] font-[400]">Galactic Alliances</span>
+        <span className="text-[16px] font-[400]">Galactic Alliances</span>
       </Link>
       <Link to="/calendar" onClick={onClose}>
-        <div className="flex items-center justify-left gap-[8px]">
+        <div className="">
           {/* <img src="/svg/calender.svg" alt="Calender" /> */}
-          <span className="text-[14px] font-[400] text-black">Calendar</span>
+          <span className="text-[16px] font-[400] text-black">Calendar</span>
         </div>
       </Link>
       {isLoggedIn ? (
         <Link to="/account" onClick={onClose}>
-          <div className="flex items-center gap-[4px]">
+          <div className="">
             {/* <IconAccount className="w-[25px] h-[25px]" /> */}
-            <div className="text-[14px]">My Profile</div>
+            <div className="text-[16px]">My Profile</div>
           </div>
         </Link>
       ) : (
         <Link to="/account/login" onClick={onClose}>
-          <div className="flex items-center gap-[4px]">
+          <div className="">
             {/* <IconLogin className="w-[25px] h-[25px]" /> */}
-            <div className="text-[14px]">Account</div>
+            <div className="text-[16px]">Account</div>
           </div>
         </Link>
       )}
