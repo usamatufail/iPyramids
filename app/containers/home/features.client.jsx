@@ -50,7 +50,8 @@ const Card = ({text, src}) => {
         <img
           src={src}
           alt={text}
-          className="w-[50px] h-[50px] md:w-[70px] md:h-[70px]"
+          className="w-[50px] h-[50px] md:w-[70px] md:h-[7
+            0px]"
         />
         <h1 className="text-[11px] md:text-[16px] font-[600] md:font-[700] text-white text-center md:max-w-[180px] max-h-[40px]">
           {text}
