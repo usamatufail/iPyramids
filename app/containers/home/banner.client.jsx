@@ -2,7 +2,7 @@ import {Animate, CustomButton, Link, Zoom} from '~/components';
 
 export const Banner = () => {
   return (
-    <header className="min-h-[350px] md:min-h-[550px] flex items-center justify-center transition-all bg-[url('/home/banner-bg.png')] bg-cover bg-no-repeat overflow-hidden px-[20px]">
+    <header className="min-h-[350px] md:min-h-[550px] flex items-center justify-center transition-all bg-[url('https://cdn.shopify.com/s/files/1/0771/2768/0277/files/banner-bg.png')] bg-cover bg-no-repeat overflow-hidden px-[20px]">
       {/* <div className="h-full w-full bg-[#000] absolute top-0 opacity-20 z-20" /> */}
       <div className="flex flex-col gap-[12px] justify-center items-center">
         <Animate>

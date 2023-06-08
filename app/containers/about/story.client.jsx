@@ -15,7 +15,7 @@ const data = [
 
 export const OurStory = () => {
   return (
-    <section className="minh-[750px] bg-[url('/about/card-bg.png')] bg-cover bg-no-repeat px-[20px] py-[20px] md:py-[46px] gap-[40px]">
+    <section className="minh-[750px] bg-[url('https://cdn.shopify.com/s/files/1/0771/2768/0277/files/card-bg.png')] bg-cover bg-no-repeat px-[20px] py-[20px] md:py-[46px] gap-[40px]">
       <Zoom>
         <div className="grid md:grid-cols-2 m-auto xl:px-[130px] gap-[30px]">
           {data.map((el) => {

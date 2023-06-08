@@ -2,7 +2,7 @@ import {Animate, Zoom} from '~/components';
 
 export const Header = () => {
   return (
-    <section className="min-h-[350px] md:min-h-[550px] flex justify-center items-end bg-[url('/about/banner-bg.png')] py-[24px] bg-cover bg-no-repeat bg-bottom">
+    <section className="min-h-[350px] md:min-h-[550px] flex justify-center items-end bg-[url('https://cdn.shopify.com/s/files/1/0771/2768/0277/files/banner-bg_095a09b0-2f7a-465f-9111-6eb847ec8a5f.png')] py-[24px] bg-cover bg-no-repeat bg-bottom">
       {/* <div className="absolute w-full h-full z-10 bg-black opacity-40" /> */}
 
       <div className="flex flex-col items-center justify-center">

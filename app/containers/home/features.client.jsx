@@ -21,7 +21,7 @@ const data = [
 
 export const Features = () => {
   return (
-    <section className="min-h-[450px] bg-[url('/home/features-bg.png')] bg-cover bg-center bg-no-repeat flex flex-col gap-[12px] items-center justify-center py-[50px]">
+    <section className="min-h-[450px] bg-[url('https://cdn.shopify.com/s/files/1/0771/2768/0277/files/features-bg.png')] bg-cover bg-center bg-no-repeat flex flex-col gap-[12px] items-center justify-center py-[50px]">
       <Animate>
         <h1 className="text-[28px] md:text-[48px] font-[500] text-white">
           Coherence Within The Mind

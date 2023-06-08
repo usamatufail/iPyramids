@@ -118,7 +118,7 @@ export default function Collection() {
 
   return (
     <>
-      <div className="bg-[url('/collection-bg.png')] bg-cover bg-no-repeat min-h-screen">
+      <div className="bg-[url('https://cdn.shopify.com/s/files/1/0771/2768/0277/files/collection-bg.png')] bg-cover bg-no-repeat min-h-screen">
         <h2 className="text-center text-[48px] pt-[45px] font-bold text-white">
           {collection?.title}
         </h2>

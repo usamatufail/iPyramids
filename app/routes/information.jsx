@@ -65,7 +65,7 @@ export default function Information() {
 
   return (
     <Suspense>
-      <div className="bg-[url('/info-bg.png')] bg-cover bg-no-repeat py-[50px] md:py-[50px] flex flex-col gap-[20px]">
+      <div className="bg-[url('https://cdn.shopify.com/s/files/1/0771/2768/0277/files/info-bg.png')] bg-cover bg-no-repeat py-[50px] md:py-[50px] flex flex-col gap-[20px]">
         <Animate>
           <h1 className="text-[28px] md:text-[52px] font-[700] text-white text-center">
             Rejuvenation Technology Inspired by Nature

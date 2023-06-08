@@ -2,7 +2,7 @@ import {Animate, Link, Zoom} from '~/components';
 
 export const Event = () => {
   return (
-    <section className="min-h-[630px] bg-[url('/home/event-bg.png')] bg-cover bg-no-repeat flex flex-col gap-[18px] justify-center items-center px-[20px] py-[40px]">
+    <section className="min-h-[630px] bg-[url('https://cdn.shopify.com/s/files/1/0771/2768/0277/files/event-bg.png')] bg-cover bg-no-repeat flex flex-col gap-[18px] justify-center items-center px-[20px] py-[40px]">
       <Animate>
         <h1 className="text-[28px] md:text-[48px] font-[700] text-center text-[#fff]">
           See Our Events
