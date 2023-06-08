@@ -16,7 +16,7 @@ export async function loader({context, params}) {
   }
 
   // TODO: Query for this?
-  return json({shopName: 'Redefine Violence'});
+  return json({shopName: 'iPyramids'});
 }
 
 const badRequest = (data) => json(data, {status: 400});

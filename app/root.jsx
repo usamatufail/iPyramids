@@ -20,6 +20,7 @@ import {DEFAULT_LOCALE, parseMenu} from './lib/utils';
 import invariant from 'tiny-invariant';
 import {useAnalytics} from './hooks/useAnalytics';
 import fontStyles from './styles/custom-font.css';
+import logo from './styles/logo.png';
 
 export const links = () => {
   return [
@@ -32,7 +33,7 @@ export const links = () => {
       rel: 'preconnect',
       href: 'https://shop.app',
     },
-    // {rel: 'icon', type: 'image/svg+xml', href: favicon},
+    {rel: 'icon', type: 'image/svg+xml', href: logo},
     {rel: 'stylesheet', href: styles},
   ];
 };

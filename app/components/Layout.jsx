@@ -2,23 +2,21 @@ import {useIsHomePath} from '~/lib/utils';
 import {
   Drawer,
   useDrawer,
-  IconBag,
   IconMenu,
   Cart,
   CartLoading,
   Link,
   MainDrawer,
-  IconAccount,
-  IconLogin,
 } from '~/components';
 import {Await, useMatches} from '@remix-run/react';
 import {useWindowScroll} from 'react-use';
-import {Suspense, useEffect, useMemo, useState} from 'react';
+import {Suspense, useEffect, useMemo, useRef, useState} from 'react';
 import {useIsHydrated} from '~/hooks/useIsHydrated';
 import {useCartFetchers} from '~/hooks/useCartFetchers';
-import {Animate, Zoom} from './Animate';
+import {Zoom} from './Animate';
 import {AiFillCaretRight} from 'react-icons/ai';
-import {BsInfoSquare, BsHouseDoor, BsPerson} from 'react-icons/bs';
+import {Fragment} from 'react';
+import {useOutsideClick} from '~/hooks/useOutsideClick';
 
 // import {newsLetterSignup} from '~/lib/ghl';1
 
@@ -80,9 +78,9 @@ function Header({title, menu}) {
   return (
     <>
       <CartDrawer isOpen={isCartOpen} onClose={closeCart} />
-      {menu && (
-        <MenuDrawer isOpen={isMenuOpen} onClose={closeMenu} menu={menu} />
-      )}
+
+      <MenuDrawer isOpen={isMenuOpen} onClose={closeMenu} menu={menu} />
+
       {menu && <DMDrawer isOpen={isDMOpen} onClose={closeDM} menu={menu} />}
       <DesktopHeader
         isHome={isHome}
@@ -231,22 +229,22 @@ function MenuMobileNav({menu, onClose}) {
       </Link>
       <Link to="/calendar" onClick={onClose}>
         <div className="flex items-center justify-left gap-[8px]">
-          <img src="/svg/calender.svg" alt="Calender" />
+          {/* <img src="/svg/calender.svg" alt="Calender" /> */}
           <span className="text-[14px] font-[400] text-black">Calendar</span>
         </div>
       </Link>
       {isLoggedIn ? (
         <Link to="/account" onClick={onClose}>
           <div className="flex items-center gap-[4px]">
-            <IconAccount className="w-[25px] h-[25px]" />
-            <div className="">My Profile</div>
+            {/* <IconAccount className="w-[25px] h-[25px]" /> */}
+            <div className="text-[14px]">My Profile</div>
           </div>
         </Link>
       ) : (
         <Link to="/account/login" onClick={onClose}>
           <div className="flex items-center gap-[4px]">
-            <IconLogin className="w-[25px] h-[25px]" />
-            <div className="">Account</div>
+            {/* <IconLogin className="w-[25px] h-[25px]" /> */}
+            <div className="text-[14px]">Account</div>
           </div>
         </Link>
       )}
@@ -295,16 +293,19 @@ function MobileHeader({isHome, openCart, openMenu}) {
   );
 }
 
-function DesktopHeader({isHome, openCart, openMenu}) {
+function DesktopHeader({isHome, openCart}) {
   const [visible, setVisible] = useState(false);
 
   const handleToggle = () => {
     setVisible((current) => !current);
-    // setTimeout(() => {
-    //   setVisible((current) => !current), 1000;
-    // });
   };
   const {y} = useWindowScroll();
+
+  const ref = useRef();
+  useOutsideClick(ref, () => {
+    setVisible(false);
+  });
+
   return (
     <>
       <header
@@ -382,9 +383,12 @@ function DesktopHeader({isHome, openCart, openMenu}) {
         {/* </Zoom> */}
       </header>
       {visible ? (
-        <div className="bg-white py-[10px] w-[100%] px-[200px] flex justify-center items-center m-auto gap-[50px] absolute top-[80px] transition-all">
+        <div
+          ref={ref}
+          className="shadow-lg z-10 bg-white py-[10px] w-[100%] px-[200px] flex justify-center items-center m-auto gap-[50px] absolute top-[80px] transition-all"
+        >
           <Link to="/collections/itorus" onClick={handleToggle}>
-            <div className="flex gap-[8px] items-center hover:bg-[#EDB311] hover:rounded-[30px] px-[24px] py-[12px] transition-all hover:transition-all">
+            <div className="flex gap-[8px] items-center hover:bg-[#EDB311] rounded-[30px] justify-center px-[24px] py-[12px] transition-all hover:transition-all">
               <img
                 src="/svg/itoris.svg"
                 className="w-[30px] h-[30px]"
@@ -394,7 +398,7 @@ function DesktopHeader({isHome, openCart, openMenu}) {
             </div>
           </Link>
           <Link to="/collections/ipyramids" onClick={handleToggle}>
-            <div className="flex gap-[8px] items-center hover:bg-[#EDB311] hover:rounded-[30px] px-[24px] py-[12px] transition-all hover:transition-all">
+            <div className="flex gap-[8px] items-center hover:bg-[#EDB311] rounded-[30px] justify-center px-[24px] py-[12px] transition-all hover:transition-all">
               <img
                 src="/svg/ipyramid.svg"
                 className="w-[30px] h-[30px]"
@@ -404,7 +408,7 @@ function DesktopHeader({isHome, openCart, openMenu}) {
             </div>
           </Link>
           <Link to="/collections/arc" onClick={handleToggle}>
-            <div className="flex gap-[8px] hover:bg-[#EDB311] items-center hover:rounded-[30px] px-[24px] py-[12px] transition-all hover:transition-all">
+            <div className="flex gap-[8px] hover:bg-[#EDB311] items-center rounded-[30px] justify-center px-[24px] py-[12px] transition-all hover:transition-all">
               <img
                 src="/svg/arc.svg"
                 className="w-[30px] h-[30px]"
@@ -414,7 +418,7 @@ function DesktopHeader({isHome, openCart, openMenu}) {
             </div>
           </Link>
           <Link to="/collections/wearables" onClick={handleToggle}>
-            <div className="flex gap-[8px] hover:bg-[#EDB311] items-center hover:rounded-[30px] px-[24px] py-[12px] transition-all hover:transition-all">
+            <div className="flex gap-[8px] hover:bg-[#EDB311] items-center rounded-[30px] justify-center px-[24px] py-[12px] transition-all hover:transition-all">
               <img
                 src="/svg/werable.svg"
                 className="w-[30px] h-[30px]"
@@ -424,7 +428,7 @@ function DesktopHeader({isHome, openCart, openMenu}) {
             </div>
           </Link>
           <Link to="/collections/orgonite" onClick={handleToggle}>
-            <div className="flex gap-[8px] hover:bg-[#EDB311] items-center hover:rounded-[30px] px-[24px] py-[12px] transition-all hover:transition-all">
+            <div className="flex gap-[8px] hover:bg-[#EDB311] items-center rounded-[30px] justify-center px-[24px] py-[12px] transition-all hover:transition-all">
               <img
                 src="/svg/orgonite.svg"
                 className="w-[30px] h-[30px]"
@@ -434,7 +438,7 @@ function DesktopHeader({isHome, openCart, openMenu}) {
             </div>
           </Link>
           <Link to="/collections/accessories" onClick={handleToggle}>
-            <div className="flex gap-[8px] hover:bg-[#EDB311] items-center hover:rounded-[30px] px-[24px] py-[12px] transition-all hover:transition-all">
+            <div className="flex gap-[8px] hover:bg-[#EDB311] items-center rounded-[30px] justify-center px-[24px] py-[12px] transition-all hover:transition-all">
               <img
                 src="/svg/access.svg"
                 className="w-[30px] h-[30px]"
@@ -507,8 +511,6 @@ function Badge({openCart, dark, count}) {
   );
 }
 
-import {Fragment} from 'react';
-
 const quickLinks = {
   links: [
     {title: 'Home', url: '/'},
@@ -519,24 +521,24 @@ const quickLinks = {
   ],
 };
 
-const connectLinks = {
-  links: [
-    {
-      title: 'Shipping & Returns',
-      url: '/shipping',
-    },
-    {
-      title: 'Frequently Asked Questions',
-      url: '/faqs',
-    },
-    {
-      title: 'Purchase Agreement',
-      url: '/purchase-agreement',
-    },
-    {title: 'Information Privacy Opt Out', url: '/info-privacy'},
-    {title: 'Privacy Policy', url: '/policies'},
-  ],
-};
+// const connectLinks = {
+//   links: [
+//     {
+//       title: 'Shipping & Returns',
+//       url: '/shipping',
+//     },
+//     {
+//       title: 'Frequently Asked Questions',
+//       url: '/faqs',
+//     },
+//     {
+//       title: 'Purchase Agreement',
+//       url: '/purchase-agreement',
+//     },
+//     {title: 'Information Privacy Opt Out', url: '/info-privacy'},
+//     {title: 'Privacy Policy', url: '/policies'},
+//   ],
+// };
 
 const Links = ({links}) => {
   return (
@@ -577,26 +579,26 @@ const Links = ({links}) => {
 export const Footerr = () => {
   return (
     <div className="bg-[#242424] m-auto">
-      <div className="pt-[20px] lg:pt-[70px] m-auto pb-[20px] grid grid-cols-2 md:grid-cols-3 gap-[20px] max-w-[700px]">
+      <div className="pt-[20px] lg:pt-[70px] m-auto pb-[20px] grid grid-cols-1 md:grid-cols-3 gap-[20px] max-w-[700px]">
         <div className="flex justify-center md:hidden">
           <Zoom>
             <Links links={quickLinks} />
           </Zoom>
         </div>
-        <div className="flex justify-center md:hidden">
+        {/* <div className="flex justify-center md:hidden">
           <Zoom>
             <Links links={connectLinks} />
           </Zoom>
-        </div>
+        </div> */}
         <div className="hidden md:block">
           <Zoom>
             <Links links={quickLinks} />
           </Zoom>
         </div>
         <div className="hidden md:block">
-          <Zoom>
+          {/* <Zoom>
             <Links links={connectLinks} />
-          </Zoom>
+          </Zoom> */}
         </div>
         <div className="hidden md:flex flex-col justify-center items-center md:items-start md:justify-start gap-[12px] text-white">
           <Zoom>
@@ -624,7 +626,7 @@ export const Footerr = () => {
           </Zoom>
         </div>
       </div>
-      <div className="md:hidden flex flex-col justify-center items-center gap-[12px] text-white">
+      <div className="md:hidden mb-[20px] flex flex-col justify-center items-center gap-[12px] text-white">
         <Zoom>
           <p className="text-[12px] font-[400] text-white">
             2035 Contractors Rd. #7Sedona, Arizona 86336

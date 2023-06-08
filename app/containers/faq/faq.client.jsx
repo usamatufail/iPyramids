@@ -4,37 +4,37 @@ const data = [
   {
     id: '1',
     icon: '/svg/faq/setting.svg',
-    heading: 'Does Redefine Violence do custom orders?',
+    heading: 'Does iPyramids do custom orders?',
     text: 'Yes we do, we have a 50 piece minimum on custom orders, please email Sheepsclothing20@gmail.com for info',
   },
   {
     id: '2',
     icon: '/svg/faq/flag.svg',
-    heading: 'Does Redefine Violence do custom orders?',
+    heading: 'Does iPyramids do custom orders?',
     text: 'Yes we do, we have a 50 piece minimum on custom orders, please email Sheepsclothing20@gmail.com for info',
   },
   {
     id: '3',
     icon: '/svg/faq/card.svg',
-    heading: 'Does Redefine Violence do custom orders?',
+    heading: 'Does iPyramids do custom orders?',
     text: 'Yes we do, we have a 50 piece minimum on custom orders, please email Sheepsclothing20@gmail.com for info',
   },
   {
     id: '4',
     icon: '/svg/faq/fire.svg',
-    heading: 'Does Redefine Violence do custom orders?',
+    heading: 'Does iPyramids do custom orders?',
     text: 'Yes we do, we have a 50 piece minimum on custom orders, please email Sheepsclothing20@gmail.com for info',
   },
   {
     id: '5',
     icon: '/svg/faq/shop.svg',
-    heading: 'Does Redefine Violence do custom orders?',
+    heading: 'Does iPyramids do custom orders?',
     text: 'Yes we do, we have a 50 piece minimum on custom orders, please email Sheepsclothing20@gmail.com for info',
   },
   {
     id: '6',
     icon: '/svg/faq/cap.svg',
-    heading: 'Does Redefine Violence do custom orders?',
+    heading: 'Does iPyramids do custom orders?',
     text: 'Yes we do, we have a 50 piece minimum on custom orders, please email Sheepsclothing20@gmail.com for info',
   },
 ];

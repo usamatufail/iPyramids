@@ -16,7 +16,11 @@ export const Banner = () => {
           </Link>
         </Animate>
         <Zoom>
-          <img src="/home/circles.png" alt="diamonds" />
+          <img
+            src="/home/circles.png"
+            alt="diamonds"
+            className="max-w-[900px] "
+          />
         </Zoom>
       </div>
     </header>

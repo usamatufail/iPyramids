@@ -48,7 +48,7 @@ export function ShopProductCard({
   };
 
   return (
-    <div className=" relative flex flex-col gap-[0px] md:rounded-[30px] rounded-[10px] bg-[rgba(244,244,244,0.75)]   text-black  max-h-[280px] md:min-h-[unset] md:max-h-[450px] shadow-[10px_10px_90px_rgba(0,_0,_0,_0.2)] md:shadow-[10px_10px_30px_rgba(0,_0,_0,_0.2)]">
+    <div className=" relative flex flex-col gap-[0px] md:rounded-[30px] rounded-[10px] bg-[rgba(244,244,244,0.75)]   text-black  max-h-[320px] md:min-h-[unset] md:max-h-[500px] shadow-[10px_10px_90px_rgba(0,_0,_0,_0.2)] md:shadow-[10px_10px_30px_rgba(0,_0,_0,_0.2)]">
       <Zoom className="rounded-[10px] md:rounded-[30px]">
         <Link
           onClick={onClick}
@@ -76,9 +76,9 @@ export function ShopProductCard({
                 {cardLabel}
               </Text>
             </div>
-            <div className="mt-[5px] min-h-[64px] md:mt-0 relative flex text-left items-center justify-between gap-1 px-[20px] pl-[7px] md:pl-[30px] md:px-[30px] py-[10px] pt-[0px] md:pt-[20px] md:py-[20px]">
+            <div className="mt-[5px] min-h-[64px] md:mt-0 relative flex text-left items-center justify-between gap-1 px-[14px] py-[10px] pt-[0px] md:pt-[20px] md:py-[20px]">
               <div className="flex flex-col gap-[12px]">
-                <h3 className="text-[20px] max-w-[193px] text-left w-full overflow-hidden md:whitespace-nowrap md:text-ellipsis mt-0 pt-0 md:pt-[unset] md:text-[">
+                <h3 className="md:text-[14px] text-[12px] max-w-[193px] text-left w-full overflow-hidden mt-0 pt-0 md:pt-[unset]">
                   {product.title}
                 </h3>
                 <div className="flex gap-4">

@@ -2,7 +2,7 @@ import {Animate, CustomButton, Link, Zoom} from '~/components';
 
 export const Cards = () => {
   return (
-    <div className="flex flex-col items-center gap-[8px] justify-center md:py-[8px] bg-white">
+    <div className="flex flex-col items-center gap-[5px] justify-center md:py-[8px] bg-white">
       <div className="grid grid-cols-2 gap-[5px] md:gap-[10px] justify-center items-center w-full h-full">
         <Zoom>
           <Card1
