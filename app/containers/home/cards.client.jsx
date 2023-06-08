@@ -23,7 +23,7 @@ export const Cards = () => {
         <Zoom>
           <Card1
             image="/home/card2.png"
-            heading="Accelerated Rejuvenation Chamber (ARC-6)"
+            heading="ARC-6"
             to="/products/accelerated-rejuvenation-chamber-arc-6"
           />
         </Zoom>

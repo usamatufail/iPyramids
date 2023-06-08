@@ -1,12 +1,11 @@
-import {useState} from 'react';
 import {Animate, Zoom} from './Animate';
 import {Link} from './Link';
 import {CustomButton} from './CustomButton';
 
 export const Subscribe = () => {
-  const [email, setEmail] = useState('');
+  // const [email, setEmail] = useState('');
   return (
-    <section className="min-h-[400px] grid md:grid-cols-2 gap-[50px] items-center bg-[url('https://cdn.shopify.com/s/files/1/0771/2768/0277/files/mail-bg.png')] px-[20px] bg-cover bg-no-repeat py-[40px]">
+    <section className="hidden md:grid min-h-[400px] md:grid-cols-2 gap-[50px] items-center bg-[url('https://cdn.shopify.com/s/files/1/0771/2768/0277/files/mail-bg.png')] px-[20px] bg-cover bg-no-repeat py-[40px]">
       <div className=" flex flex-col gap-[32px] m-auto justify-center items-center md:items-start">
         <Animate>
           <h2 className="text-[28px] md:text-[42px] font-[700] text-white">
