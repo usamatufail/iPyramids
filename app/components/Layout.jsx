@@ -7,6 +7,8 @@ import {
   CartLoading,
   Link,
   MainDrawer,
+  CustomDrawer,
+  useCustomDrawer,
 } from '~/components';
 import {Await, useMatches} from '@remix-run/react';
 import {useWindowScroll} from 'react-use';
@@ -59,7 +61,7 @@ function Header({title, menu}) {
     isOpen: isMenuOpen,
     openDrawer: openMenu,
     closeDrawer: closeMenu,
-  } = useDrawer();
+  } = useCustomDrawer();
 
   const {
     isOpen: isDMOpen,
@@ -117,11 +119,16 @@ function CartDrawer({isOpen, onClose}) {
 
 export function MenuDrawer({isOpen, onClose, menu}) {
   return (
-    <Drawer open={isOpen} onClose={onClose} openFrom="left" heading="Menu">
+    <CustomDrawer
+      open={isOpen}
+      onClose={onClose}
+      openFrom="left"
+      heading="Menu"
+    >
       <div className="grid">
         <MenuMobileNav menu={menu} onClose={onClose} />
       </div>
-    </Drawer>
+    </CustomDrawer>
   );
 }
 
