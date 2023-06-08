@@ -48,7 +48,7 @@ export function Drawer({heading, open, onClose, openFrom = 'right', children}) {
                 leaveFrom="translate-x-0"
                 leaveTo={offScreen[openFrom]}
               >
-                <Dialog.Panel className="w-screen max-w-lg text-left align-middle transition-all transform shadow-xl h-screen-dynamic bg-contrast">
+                <Dialog.Panel className="w-[250px] max-w-lg text-left align-middle transition-all transform shadow-xl h-screen-dynamic bg-contrast">
                   <header
                     className={`sticky top-0 flex items-center px-6 h-nav sm:px-8 md:px-12 ${
                       heading ? 'justify-between' : 'justify-end'
@@ -70,12 +70,8 @@ export function Drawer({heading, open, onClose, openFrom = 'right', children}) {
                       <IconClose aria-label="Close panel" />
                     </button>
                   </header>
-                  <div className="flex justify-center">
-                    <img src="/logo.png" alt="logo" className="w-[150px]" />
-                  </div>
-                  <div className="flex justify-center text-center">
-                    {children}
-                  </div>
+
+                  {children}
                 </Dialog.Panel>
               </Transition.Child>
             </div>
