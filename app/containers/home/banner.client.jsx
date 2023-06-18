@@ -21,8 +21,8 @@ export const Banner = () => {
           </Link>
         </Animate>
         <Zoom>
-          <div className="grid grid-cols-2 gap-[40px] lg:gap-[unset] lg:grid-cols-4">
-            <video
+          <div className="grid grid-cols-1 gap-[40px] lg:gap-[unset] mx-auto">
+            {/* <video
               width="100%"
               height="100%"
               autoPlay
@@ -60,14 +60,14 @@ export const Banner = () => {
                 src="https://cdn.shopify.com/videos/c/o/v/1ef20bac95e94addaab0d1b0e207c7c2.mp4"
                 type="video/mp4"
               />
-            </video>
+            </video> */}
             <video
               width="100%"
               height="100%"
               autoPlay
               loop
               muted
-              className="mt-[-10px] w-[250px] lg:w-full"
+              className="w-[250px] lg:w-[500px]"
             >
               <source
                 src="https://cdn.shopify.com/videos/c/o/v/258354e3139240adbd6d079619dfc960.mp4"
