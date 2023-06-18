@@ -1,8 +1,8 @@
-import {Animate, CustomButton, Link, Zoom, Animation} from '~/components';
-import green from '../../animations/g.json';
-import lightblue from '../../animations/l.json';
-import purple from '../../animations/pur.json';
-import pearl from '../../animations/p.json';
+import {Animate, CustomButton, Link, Zoom} from '~/components';
+// import green from '../../animations/g.json';
+// import lightblue from '../../animations/l.json';
+// import purple from '../../animations/pur.json';
+// import pearl from '../../animations/p.json';
 
 export const Banner = () => {
   return (
@@ -21,11 +21,63 @@ export const Banner = () => {
           </Link>
         </Animate>
         <Zoom>
-          <div className="grid grid-cols-4">
-            <Animation animation={green} />
-            <Animation animation={lightblue} />
-            <Animation animation={purple} />
-            <Animation animation={pearl} />
+          <div className="grid grid-cols-2 lg:grid-cols-4">
+            <video
+              width="100%"
+              height="100%"
+              autoPlay
+              loop
+              muted
+              className="mt-[-10px]"
+            >
+              <source
+                src="https://cdn.shopify.com/videos/c/o/v/105e9ddc3720463291fac7651eadbecc.mp4"
+                type="video/mp4"
+              />
+            </video>
+            <video
+              width="100%"
+              height="100%"
+              autoPlay
+              loop
+              muted
+              className="mt-[-10px]"
+            >
+              <source
+                src="https://cdn.shopify.com/videos/c/o/v/8e7b7e61f2694e98b813bb57bfcad68d.mp4"
+                type="video/mp4"
+              />
+            </video>
+            <video
+              width="100%"
+              height="100%"
+              autoPlay
+              loop
+              muted
+              className="mt-[-10px]"
+            >
+              <source
+                src="https://cdn.shopify.com/videos/c/o/v/1ef20bac95e94addaab0d1b0e207c7c2.mp4"
+                type="video/mp4"
+              />
+            </video>
+            <video
+              width="100%"
+              height="100%"
+              autoPlay
+              loop
+              muted
+              className="mt-[-10px]"
+            >
+              <source
+                src="https://cdn.shopify.com/videos/c/o/v/258354e3139240adbd6d079619dfc960.mp4"
+                type="video/mp4"
+              />
+            </video>
+            {/* <Animation animation={green} />
+            <Animation animation={lightblue} /> */}
+            {/* <Animation animation={purple} /> */}
+            {/* <Animation animation={pearl} /> */}
           </div>
         </Zoom>
       </div>
