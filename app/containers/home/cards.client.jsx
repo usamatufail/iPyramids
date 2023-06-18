@@ -14,8 +14,9 @@ export const Cards = () => {
         <Zoom>
           <Card2
             image="/home/card3.png"
-            heading="6 Sided Orgone Pyramid"
-            to="/products/6-sided-orgone-pyramid"
+            heading="iTorus 9"
+            to="/products/itorus-9-9-5-tachyon-vortex-pemf-5-0"
+            video="https://cdn.shopify.com/videos/c/o/v/8e7b7e61f2694e98b813bb57bfcad68d.mp4"
           />
         </Zoom>
         <Zoom>
@@ -28,23 +29,34 @@ export const Cards = () => {
         <Zoom>
           <Card2
             image="/home/card4.png"
-            heading="Custom Travel Case"
-            to="/products/case-only-custom-travel-case-for-itorus-1-and-2"
+            heading="iTorus 2 Mini"
+            to="/products/itorus-2-mini-2-8-tachyon-vortex-pemf-4-0"
+            video="https://cdn.shopify.com/videos/c/o/v/1ef20bac95e94addaab0d1b0e207c7c2.mp4"
           />
         </Zoom>
       </div>
-      {/* <div className="grid grid-cols-2 gap-[5px] md:gap-[10px] justify-center items-center w-full h-full">
-
-      </div> */}
     </div>
   );
 };
 
-const Card1 = ({image, heading, to}) => {
+const Card1 = ({image, video, heading, to}) => {
   return (
-    <div className="flex flex-col items-center justify-center gap-[17px] bg-[black] px-[10px] md:px-[50px] py-[20px] md:py-[32px] h-[270px] md:h-[unset]">
+    <div className="max-h-[310px] flex flex-col items-center justify-center gap-[17px] bg-[black] px-[10px] md:px-[50px] py-[20px] md:py-[32px] h-[270px] md:h-[unset]">
       <Zoom>
-        <img src={image} alt={heading} className="object-contain h-[150px]" />
+        {video ? (
+          <video
+            width="300"
+            height="100%"
+            autoPlay
+            loop
+            muted
+            className="mt-[-10px]"
+          >
+            <source src={video} type="video/mp4" />
+          </video>
+        ) : (
+          <img src={image} alt={heading} className="object-contain h-[150px]" />
+        )}
       </Zoom>
       <div className="flex flex-col gap-[7px] justify-center items-center">
         <Animate>
@@ -62,9 +74,9 @@ const Card1 = ({image, heading, to}) => {
   );
 };
 
-const Card2 = ({image, heading, to}) => {
+const Card2 = ({video, image, heading, to}) => {
   return (
-    <div className="flex flex-col items-center justify-center gap-[17px] bg-[#f2f2f2] px-[10px] md:px-[50px] py-[20px] md:py-[32px] h-[270px] md:h-[unset]">
+    <div className="max-h-[310px] flex flex-col items-center justify-center gap-[17px] bg-[#FBFAFE] px-[10px] md:px-[50px] py-[20px] md:py-[32px] h-[270px] md:h-[unset]">
       <div className="flex flex-col gap-[7px] justify-center items-center">
         <Animate>
           <h1 className="text-[16px] md:text-[28px] font-[700] text-black text-center">
@@ -78,7 +90,21 @@ const Card2 = ({image, heading, to}) => {
         </Animate>
       </div>
       <Zoom>
-        <img src={image} alt={heading} className="object-contain h-[150px]" />
+        {/* <img src={image} alt={heading} className="object-contain h-[150px]" /> */}
+        {video ? (
+          <video
+            width="280"
+            height="100%"
+            autoPlay
+            loop
+            muted
+            className="mt-[-10px]"
+          >
+            <source src={video} type="video/mp4" />
+          </video>
+        ) : (
+          <img src={image} alt={heading} className="object-contain h-[150px]" />
+        )}
       </Zoom>
     </div>
   );
