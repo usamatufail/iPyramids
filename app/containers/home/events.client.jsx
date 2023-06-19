@@ -10,7 +10,10 @@ export const Event = () => {
       </Animate>
       <Zoom>
         <Link to="/calendar">
-          <img src="/home/event-cal.png" alt="Event Calender" />
+          <img
+            src="https://cdn.shopify.com/s/files/1/0771/2768/0277/files/event-cal.png"
+            alt="Event Calender"
+          />
         </Link>
       </Zoom>
       <Animate>

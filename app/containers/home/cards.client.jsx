@@ -6,7 +6,7 @@ export const Cards = () => {
       <div className="grid grid-cols-2 gap-[5px] md:gap-[10px] p-[5px] md:p-[10px] justify-center items-center w-full">
         <Zoom>
           <Card1
-            image="/home/card1.png"
+            image="https://cdn.shopify.com/s/files/1/0771/2768/0277/files/card1.png"
             heading="Star Gate 4.0"
             to="/products/star-gate-4-0"
           />
@@ -21,7 +21,7 @@ export const Cards = () => {
         </Zoom>
         <Zoom>
           <Card1
-            image="/home/card2.png"
+            image="https://cdn.shopify.com/s/files/1/0771/2768/0277/files/card2.png"
             heading="ARC-6"
             to="/products/accelerated-rejuvenation-chamber-arc-6"
           />

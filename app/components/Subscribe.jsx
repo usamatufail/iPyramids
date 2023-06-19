@@ -30,7 +30,7 @@ export const Subscribe = () => {
       <div className="flex justify-center relative z-20">
         <Zoom>
           <img
-            src="/home/diamond.png"
+            src="https://cdn.shopify.com/s/files/1/0771/2768/0277/files/diamond.png"
             alt="Diamond"
             className="w-[300px] h-[350px] md:w-[unset] md:h-[unset]"
           />

@@ -63,6 +63,7 @@ export default function Information() {
   // TODO: skeletons vs placeholders
   // const skeletons = getHeroPlaceholder([{}, {}, {}]);
 
+  // https://cdn.shopify.com/s/files/1/0771/2768/0277/files/info-bg.png
   return (
     <Suspense>
       <div className="bg-[url('https://cdn.shopify.com/s/files/1/0771/2768/0277/files/info-bg.png')] bg-cover bg-no-repeat py-[50px] md:py-[50px] flex flex-col gap-[20px]">
