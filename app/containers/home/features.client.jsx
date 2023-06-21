@@ -83,7 +83,7 @@ const Card = ({text, src, src2, img}) => {
             className="w-[50px] h-[50px] rounded-[50px]"
           />
         </div>
-        <h1 className="text-[11px] md:text-[16px] font-[600] md:font-[700] text-white text-center md:max-w-[180px] max-h-[40px]">
+        <h1 className="text-[11px] md:text-[16px] font-[600] md:font-[700] text-white text-center md:max-w-[180px] h-[40px]">
           {text}
         </h1>
       </div>
