@@ -15,12 +15,15 @@ const data = [
 
 export const OurStory = () => {
   return (
-    <section className="minh-[750px] bg-[url('https://cdn.shopify.com/s/files/1/0771/2768/0277/files/card-bg.png')] bg-cover bg-no-repeat px-[20px] py-[20px] md:py-[46px] gap-[40px]">
+    <section className="min-h-[450px] bg-[url('https://cdn.shopify.com/s/files/1/0771/2768/0277/files/card-bg.png')] bg-cover bg-no-repeat px-[20px] py-[20px] md:py-[46px] gap-[40px]">
       <Zoom>
-        <div className="grid md:grid-cols-2 m-auto xl:px-[130px] gap-[30px]">
+        <div className="flex flex-col md:flex-row m-auto xl:px-[130px] gap-[30px] md:gap-[80px] items-center justify-center">
           {data.map((el) => {
             return (
-              <div key={el.heading}>
+              <div
+                key={el.heading}
+                className="flex items-center justify-center"
+              >
                 <Link to="/collections/all-products">
                   <Card img1={el.img1} img2={el.img2} heading={el.heading} />
                 </Link>
