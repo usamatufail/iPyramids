@@ -81,6 +81,7 @@ export async function loader({params, request, context}) {
     {
       product,
       shop,
+      selectedVariant,
       storeDomain: shop.primaryDomain.url,
       recommended,
       analytics: {
@@ -100,15 +101,63 @@ export async function loader({params, request, context}) {
 }
 
 export default function Product() {
-  const {product, shop, recommended} = useLoaderData();
+  const {product, shop, recommended, selectedVariant} = useLoaderData();
   const {media, title, vendor, descriptionHtml} = product;
   const {shippingPolicy, refundPolicy} = shop;
+
+  const style = [
+    // isFullWidth ? 'md:col-span-2' : 'md:col-span-1',
+    // isFirst || isFourth ? '' : 'md:aspect-[4/5]',
+    'aspect-square snap-center card-image bg-[#fff] w-mobileGallery md:w-full',
+  ].join(' ');
 
   return (
     <>
       <Section padding="0" className="px-0">
         <div className="grid items-start md:gap-6 md:grid-cols-2 px-0 lg:px-[200px] mt-[20px]">
-          <ProductGallery media={media.nodes} className="w-full md:w-full" />
+          {/* <ProductGallery media={media.nodes} className="w-full md:w-full" /> */}
+          <div
+            className={`swimlane md:grid-flow-row hiddenScroll p-0 md:overflow-x-auto w-full md:w-full`}
+          >
+            <div
+              className={style}
+              // @ts-ignore
+              // key={med.id || med.image.id}
+            >
+              {/* TODO: Replace with MediaFile when it's available */}
+              {selectedVariant && selectedVariant?.image ? (
+                <img
+                  src={selectedVariant?.image?.url}
+                  alt={selectedVariant?.image?.altText || ''}
+                  className="w-full h-full aspect-square fadeIn object-contain"
+                  style={{objectFit: 'contain'}}
+                />
+              ) : (
+                <>
+                  <ProductGallery
+                    media={media.nodes}
+                    className="w-full md:w-full"
+                  />
+                </>
+              )}
+              {/* <MediaFile
+                  tabIndex="0"
+                  className={`w-full h-full aspect-square fadeIn object-cover`}
+                  data={data}
+                  sizes={
+                    isFullWidth
+                      ? '(min-width: 64em) 60vw, (min-width: 48em) 50vw, 90vw'
+                      : '(min-width: 64em) 30vw, (min-width: 48em) 25vw, 90vw'
+                  }
+                  // @ts-ignore
+                  options={{
+                    crop: 'center',
+                    scale: 2,
+                  }}
+                  {...mediaProps}
+                /> */}
+            </div>
+          </div>
           <div className="md:pt-[45px]">
             <section className="flex flex-col w-full max-w-xl gap-8 p-6 md:mx-auto md:max-w-md md:px-0">
               <div className="grid gap-2">
