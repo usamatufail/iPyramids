@@ -31,6 +31,7 @@ import invariant from 'tiny-invariant';
 import clsx from 'clsx';
 import {MEDIA_FRAGMENT, PRODUCT_CARD_FRAGMENT} from '~/data/fragments';
 import {routeHeaders, CACHE_SHORT} from '~/data/cache';
+import {variantDescriptions} from '../../../data/descriptions';
 
 export const headers = routeHeaders;
 
@@ -111,6 +112,14 @@ export default function Product() {
     'aspect-square snap-center card-image bg-[#fff] w-mobileGallery md:w-full',
   ].join(' ');
 
+  console.log(selectedVariant);
+
+  const customDescription = variantDescriptions.find(
+    (variant) => selectedVariant.id === variant.id,
+  );
+
+  console.log(customDescription);
+
   return (
     <>
       <Section padding="0" className="px-0">
@@ -169,7 +178,7 @@ export default function Product() {
                   <Text className={'opacity-50 font-medium'}>{vendor}</Text>
                 )}
               </div>
-              <ProductForm />
+              <ProductForm customDescription={customDescription} />
               <div className="grid gap-4 py-4">
                 {descriptionHtml && (
                   <ProductDetail
@@ -224,7 +233,7 @@ export default function Product() {
   );
 }
 
-export function ProductForm() {
+export function ProductForm({customDescription}) {
   const {product, analytics, storeDomain} = useLoaderData();
 
   const [currentSearchParams] = useSearchParams();
@@ -286,6 +295,13 @@ export function ProductForm() {
           options={product.options}
           searchParamsWithDefaults={searchParamsWithDefaults}
         />
+        {customDescription?.description && (
+          <ProductDetail
+            title={selectedVariant?.title}
+            open
+            content={customDescription?.description}
+          />
+        )}
         {selectedVariant && (
           <div className="grid items-stretch gap-4">
             {isOutOfStock ? (
