@@ -27,8 +27,13 @@ export const Banner = () => {
               autoPlay
               loop
               muted
+              playsInline
               className="w-[250px] lg:w-[500px]"
             >
+              <source
+                src="https://cdn.shopify.com/videos/c/o/v/7914795c9fa84ba3a9b670a417663bc8.mov"
+                type='video/mp4; codecs="hvc1"'
+              ></source>
               <source
                 src="https://res.cloudinary.com/dfy77jd7z/video/upload/v1687129985/green_jefb2r.webm"
                 type="video/mp4"
@@ -43,6 +48,10 @@ export const Banner = () => {
               className="w-[250px] lg:w-[500px]"
             >
               <source
+                src="https://cdn.shopify.com/videos/c/o/v/043604247e9e4d30aec8bedaa7955d33.mov"
+                type='video/mp4; codecs="hvc1"'
+              ></source>
+              <source
                 src="https://res.cloudinary.com/dfy77jd7z/video/upload/v1687130002/light-blue_p7ad8a.webm"
                 type="video/mp4"
               />
@@ -56,6 +65,10 @@ export const Banner = () => {
               className="w-[250px] lg:w-[500px]"
             >
               <source
+                src="https://cdn.shopify.com/videos/c/o/v/689278e77ed2484194f3f75d0dc96cda.mov"
+                type='video/mp4; codecs="hvc1"'
+              ></source>
+              <source
                 src="https://res.cloudinary.com/dfy77jd7z/video/upload/v1687130005/pearl_tge5ps.webm"
                 type="video/mp4"
               />
@@ -68,6 +81,10 @@ export const Banner = () => {
               muted
               className="w-[250px] lg:w-[500px]"
             >
+              <source
+                src="https://cdn.shopify.com/videos/c/o/v/5d55d268345841ac93257bb6c87a15ff.mov"
+                type='video/mp4; codecs="hvc1"'
+              ></source>
               <source
                 src="https://res.cloudinary.com/dfy77jd7z/video/upload/v1687130010/purple_m8vyq3.webm"
                 type="video/mp4"
