@@ -65,7 +65,7 @@ export default function Calendar() {
 
   return (
     <Suspense>
-      <div className="bg-[url('https://cdn.shopify.com/s/files/1/0771/2768/0277/files/info-bg.png')] bg-cover bg-no-repeat py-[50px] md:py-[40px] flex flex-col gap-[10px]">
+      <div className="bg-[url('https://cdn.shopify.com/s/files/1/0771/2768/0277/files/collection-bg.png')] bg-cover bg-no-repeat py-[50px] md:py-[40px] flex flex-col gap-[10px]">
         <Animate>
           <h1 className="text-[28px] md:text-[48px] font-[700] text-white text-center font-apple">
             Book Now For

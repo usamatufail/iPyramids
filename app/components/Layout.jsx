@@ -392,7 +392,7 @@ function DesktopHeader({isHome, openCart}) {
       {visible ? (
         <div
           ref={ref}
-          className="shadow-lg z-10 bg-white py-[10px] w-[100%] px-[200px] flex justify-center items-center m-auto gap-[50px] absolute top-[80px] transition-all"
+          className="shadow-lg z-[999] bg-white py-[10px] w-[100%] px-[200px] flex justify-center items-center m-auto gap-[50px] absolute top-[80px] transition-all"
         >
           <Link to="/collections/itorus" onClick={handleToggle}>
             <div className="flex gap-[8px] items-center hover:bg-[#EDB311] rounded-[30px] justify-center px-[24px] py-[12px] transition-all hover:transition-all">

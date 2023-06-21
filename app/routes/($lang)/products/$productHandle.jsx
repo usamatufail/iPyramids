@@ -107,14 +107,12 @@ export default function Product() {
   return (
     <>
       <Section padding="0" className="px-0">
-        <div className="grid items-start md:gap-6 lg:gap-20 md:grid-cols-2 lg:grid-cols-3">
-          <ProductGallery
-            media={media.nodes}
-            className="w-full md:w-full lg:col-span-2"
-          />
-          <div className="sticky md:-mb-nav md:top-nav md:-translate-y-nav md:h-screen md:pt-nav hiddenScroll md:overflow-y-scroll">
-            <section className="flex flex-col w-full max-w-xl gap-8 p-6 md:mx-auto md:max-w-sm md:px-0">
+        <div className="grid items-start md:gap-6 md:grid-cols-2 px-0 lg:px-[200px] mt-[20px]">
+          <ProductGallery media={media.nodes} className="w-full md:w-full" />
+          <div className="md:pt-[45px]">
+            <section className="flex flex-col w-full max-w-xl gap-8 p-6 md:mx-auto md:max-w-md md:px-0">
               <div className="grid gap-2">
+                {/* sticky md:-mb-nav md:top-nav md:-translate-y-nav md:h-screen hiddenScroll md:overflow-y-scroll */}
                 <Heading as="h1" className="whitespace-normal">
                   {title}
                 </Heading>
