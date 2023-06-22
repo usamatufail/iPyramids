@@ -369,10 +369,10 @@ function ProductOptions({options, searchParamsWithDefaults}) {
             key={option.name}
             className="flex flex-col flex-wrap mb-4 gap-y-2 last:mb-0"
           >
-            <Heading as="legend" size="lead" className="min-w-[4rem]">
+            <Heading as="legend" size="lead" className="min-w-[4rem] mb-[12px]">
               {option.name}
             </Heading>
-            <div className="flex flex-wrap items-baseline gap-4">
+            <div className="flex flex-wrap gap-y-6 items-baseline gap-[8px]">
               {/**
                * First, we render a bunch of <Link> elements for each option value.
                * When the user clicks one of these buttons, it will hit the loader
@@ -381,7 +381,7 @@ function ProductOptions({options, searchParamsWithDefaults}) {
                * If there are more than 7 values, we render a dropdown.
                * Otherwise, we just render plain links.
                */}
-              {option.values.length > 7 ? (
+              {option.values.length > 50 ? (
                 <div className="relative w-full">
                   <Listbox>
                     {({open}) => (
@@ -455,8 +455,10 @@ function ProductOptions({options, searchParamsWithDefaults}) {
                           optionValue={value}
                           searchParams={searchParamsWithDefaults}
                           className={clsx(
-                            'leading-none py-1 border-b-[1.5px] cursor-pointer transition-all duration-200',
-                            checked ? 'border-primary/50' : 'border-primary/0',
+                            'leading-none p-[10px] border-[1.5px] cursor-pointer transition-all duration-200 rounded-[22px]',
+                            checked
+                              ? 'border-primary/50 bg-[#000] text-white'
+                              : 'border-[#808080] border-[1.5px] rounded-[22px]',
                           )}
                         />
                       </Text>
