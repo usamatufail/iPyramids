@@ -312,6 +312,17 @@ function DesktopHeader({isHome, openCart}) {
   useOutsideClick(ref, () => {
     setVisible(false);
   });
+  const [show, setShow] = useState(false);
+
+  const handleToggle1 = () => {
+    setShow((current) => !current);
+  };
+  // const {z} = useWindowScroll();
+
+  const ref1 = useRef();
+  useOutsideClick(ref1, () => {
+    setShow(false);
+  });
 
   return (
     <>
@@ -349,9 +360,12 @@ function DesktopHeader({isHome, openCart}) {
             </Link>
           </Zoom>
           <Zoom>
-            <Link to="/collections/galactic">
+            {/* <Link to="/collections/galactic">
               <span className="text-[12px]">Galactic Alliances</span>
-            </Link>
+            </Link> */}
+            <button onClick={handleToggle1}>
+              <span className="text-[12px]">Galactic Alliances</span>
+            </button>
           </Zoom>
         </div>
 
@@ -431,7 +445,7 @@ function DesktopHeader({isHome, openCart}) {
                 className="w-[30px] h-[30px]"
                 alt="icon"
               />
-              <h1 className="text-[12px] font-[500] text-black">Werable</h1>
+              <h1 className="text-[12px] font-[500] text-black">Wearbles</h1>
             </div>
           </Link>
           <Link to="/collections/orgonite" onClick={handleToggle}>
@@ -452,6 +466,47 @@ function DesktopHeader({isHome, openCart}) {
                 alt="icon"
               />
               <h1 className="text-[12px] font-[500] text-black">Accessories</h1>
+            </div>
+          </Link>
+        </div>
+      ) : null}
+      {show ? (
+        <div
+          ref={ref1}
+          className="shadow-lg z-[999] bg-white py-[10px] w-[100%] px-[200px] flex justify-center items-center m-auto gap-[50px] absolute top-[80px] transition-all"
+        >
+          <Link to="/collections/earth-tuned" onClick={handleToggle1}>
+            <div className="flex gap-[8px] items-center hover:bg-[#EDB311] rounded-[30px] justify-center px-[24px] py-[12px] transition-all hover:transition-all">
+              <img
+                src="/svg/earth.svg"
+                className="w-[30px] h-[30px]"
+                alt="icon"
+              />
+              <h1 className="text-[12px] font-[500] text-black">Earth Tuned</h1>
+            </div>
+          </Link>
+          <Link to="/collections/crystal-current" onClick={handleToggle1}>
+            <div className="flex gap-[8px] items-center hover:bg-[#EDB311] rounded-[30px] justify-center px-[24px] py-[12px] transition-all hover:transition-all">
+              <img
+                src="/svg/crystal.svg"
+                className="w-[30px] h-[30px]"
+                alt="icon"
+              />
+              <h1 className="text-[12px] font-[500] text-black">
+                Crystal Current
+              </h1>
+            </div>
+          </Link>
+          <Link to="/collections/darlan-loureiro" onClick={handleToggle1}>
+            <div className="flex gap-[8px] hover:bg-[#EDB311] items-center rounded-[30px] justify-center px-[24px] py-[12px] transition-all hover:transition-all">
+              <img
+                src="/svg/darlan.svg"
+                className="w-[30px] h-[30px]"
+                alt="icon"
+              />
+              <h1 className="text-[12px] font-[500] text-black">
+                Darlan Loureiro
+              </h1>
             </div>
           </Link>
         </div>
@@ -523,29 +578,32 @@ const quickLinks = {
     {title: 'Home', url: '/'},
     {title: 'Our Location', url: '/location'},
     {title: 'Store', url: '/collections/all-products'},
-    // {title: 'Search', url: '/collections/all-designs'},
     {title: 'Calender', url: '/calendar'},
   ],
 };
 
-// const connectLinks = {
-//   links: [
-//     {
-//       title: 'Shipping & Returns',
-//       url: '/shipping',
-//     },
-//     {
-//       title: 'Frequently Asked Questions',
-//       url: '/faqs',
-//     },
-//     {
-//       title: 'Purchase Agreement',
-//       url: '/purchase-agreement',
-//     },
-//     {title: 'Information Privacy Opt Out', url: '/info-privacy'},
-//     {title: 'Privacy Policy', url: '/policies'},
-//   ],
-// };
+const connectLinks = {
+  links: [
+    {
+      title: 'Privacy Policy',
+      url: '/pages/privacy-policy',
+    },
+    {
+      title: 'Purchase Agreement',
+      url: '/pages/purchase-agreement',
+    },
+    {
+      title: 'Shipping and Return Policy',
+      url: '/pages/shipping-and-return-policy',
+    },
+    {title: 'Terms of Services', url: '/pages/terms-of-services'},
+    {title: 'Medical Disclaimer', url: '/pages/medical-disclaimer'},
+    {
+      title: 'California Consumer Privacy Act',
+      url: '/pages/ccpa-opt-out',
+    },
+  ],
+};
 
 const Links = ({links}) => {
   return (
@@ -592,20 +650,20 @@ export const Footerr = () => {
             <Links links={quickLinks} />
           </Zoom>
         </div>
-        {/* <div className="flex justify-center md:hidden">
+        <div className="flex justify-center md:hidden">
           <Zoom>
             <Links links={connectLinks} />
           </Zoom>
-        </div> */}
+        </div>
         <div className="hidden md:block">
           <Zoom>
             <Links links={quickLinks} />
           </Zoom>
         </div>
         <div className="hidden md:block">
-          {/* <Zoom>
+          <Zoom>
             <Links links={connectLinks} />
-          </Zoom> */}
+          </Zoom>
         </div>
         <div className="hidden md:flex flex-col justify-center items-center md:items-start md:justify-start gap-[12px] text-white">
           <Zoom>
