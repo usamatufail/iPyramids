@@ -5,7 +5,7 @@ import {PRODUCT_CARD_FRAGMENT} from '~/data/fragments';
 import {seoPayload} from '~/lib/seo.server';
 import {AnalyticsPageType} from '@shopify/hydrogen';
 import {routeHeaders, CACHE_SHORT} from '~/data/cache';
-import {Banner, Event, Features} from '~/containers';
+import {Banner, Event, Explore, Features} from '~/containers';
 import {Cards} from '~/containers';
 import {Subscribe} from '~/components';
 // const settleImages = ['/images/settle-men.png', '/images/settle-women.png'];
@@ -77,6 +77,7 @@ export default function Homepage() {
             <Features />
             <Event />
             <Cards />
+            <Explore />
             <Subscribe />
           </section>
         </Suspense>

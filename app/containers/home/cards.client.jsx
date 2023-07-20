@@ -23,7 +23,7 @@ export const Cards = () => {
           <Card1
             image="https://cdn.shopify.com/s/files/1/0771/2768/0277/files/card2.png"
             heading="ARC-6"
-            to="/products/accelerated-rejuvenation-chamber-arc-6"
+            to="/products/accelerated-rejuvenation-chamber-arc-6-dup"
           />
         </Zoom>
         <Zoom>

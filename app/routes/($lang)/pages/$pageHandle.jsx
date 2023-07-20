@@ -38,12 +38,14 @@ export default function Page() {
 
   return (
     <>
-      <PageHeader heading={page.title}>
-        <div
-          dangerouslySetInnerHTML={{__html: page.body}}
-          className="text-black"
-        />
-      </PageHeader>
+      <div className=" max-w-[1200px] m-auto">
+        <PageHeader heading={page.title}>
+          <div
+            dangerouslySetInnerHTML={{__html: page.body}}
+            className="text-black"
+          />
+        </PageHeader>
+      </div>
     </>
   );
 }
