@@ -237,7 +237,18 @@ function MenuMobileNav({menu, onClose}) {
       <Link to="/collections/darlan-loureiro" onClick={onClose}>
         <span className="text-[16px] font-[400]">Darlan Loureiro</span>
       </Link>
-
+      <Link to="/collections/itorus" onClick={onClose}>
+        <span className="text-[16px] font-[400]">iTorus</span>
+      </Link>
+      <Link to="/collections/ipyramids" onClick={onClose}>
+        <span className="text-[16px] font-[400]">iPyramids</span>
+      </Link>
+      <Link to="/collections/arc" onClick={onClose}>
+        <span className="text-[16px] font-[400]">ARC</span>
+      </Link>
+      <Link to="/collections/wearables" onClick={onClose}>
+        <span className="text-[16px] font-[400]">Wearables</span>
+      </Link>
       <Link to="/collections/all-products" onClick={onClose}>
         <span className="text-[16px] font-[400]">Store</span>
       </Link>
