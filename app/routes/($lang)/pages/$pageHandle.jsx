@@ -38,7 +38,7 @@ export default function Page() {
 
   return (
     <>
-      <div className=" max-w-[1200px] m-auto">
+      <div className=" max-w-[1200px] m-auto px-[20px]">
         <PageHeader heading={page.title}>
           <div
             dangerouslySetInnerHTML={{__html: page.body}}
