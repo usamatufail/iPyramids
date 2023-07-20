@@ -31,11 +31,13 @@ export const Banner = () => {
               className="w-[250px] lg:w-[500px]"
             >
               <source
+                // src="https://cdn.shopify.com/videos/c/o/v/121bcb4978004bbb8c65ffe3940aa2c1.mov"
                 src="https://cdn.shopify.com/videos/c/o/v/7914795c9fa84ba3a9b670a417663bc8.mov"
                 type='video/mp4; codecs="hvc1"'
               ></source>
               <source
-                src="https://res.cloudinary.com/dfy77jd7z/video/upload/v1687129985/green_jefb2r.webm"
+                src="https://res.cloudinary.com/dfy77jd7z/video/upload/v1689806158/iTorus/blue0001-0240_x6kl5o.webm"
+                // src="https://res.cloudinary.com/dfy77jd7z/video/upload/v1687129985/green_jefb2r.webm"
                 type="video/mp4"
               />
             </video>
@@ -52,7 +54,9 @@ export const Banner = () => {
                 type='video/mp4; codecs="hvc1"'
               ></source>
               <source
-                src="https://res.cloudinary.com/dfy77jd7z/video/upload/v1687130002/light-blue_p7ad8a.webm"
+                src="https://res.cloudinary.com/dfy77jd7z/video/upload/v1689806175/iTorus/cream0241-0480_saz6hc.webm"
+                // src="https://res.cloudinary.com/dfy77jd7z/video/upload/v1687130002/light-blue_p7ad8a.webm"
+
                 type="video/mp4"
               />
             </video>
@@ -69,7 +73,8 @@ export const Banner = () => {
                 type='video/mp4; codecs="hvc1"'
               ></source>
               <source
-                src="https://res.cloudinary.com/dfy77jd7z/video/upload/v1687130005/pearl_tge5ps.webm"
+                src="https://res.cloudinary.com/dfy77jd7z/video/upload/v1689806188/iTorus/green0001-0240_nvusas.webm"
+                // src="https://res.cloudinary.com/dfy77jd7z/video/upload/v1687130005/pearl_tge5ps.webm"
                 type="video/mp4"
               />
             </video>
@@ -86,7 +91,8 @@ export const Banner = () => {
                 type='video/mp4; codecs="hvc1"'
               ></source>
               <source
-                src="https://res.cloudinary.com/dfy77jd7z/video/upload/v1687130010/purple_m8vyq3.webm"
+                src="https://res.cloudinary.com/dfy77jd7z/video/upload/v1689806201/iTorus/purple0001-0240_fawidw.webm"
+                // src="https://res.cloudinary.com/dfy77jd7z/video/upload/v1687130010/purple_m8vyq3.webm"
                 type="video/mp4"
               />
             </video>

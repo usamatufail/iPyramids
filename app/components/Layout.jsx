@@ -231,9 +231,9 @@ function MenuMobileNav({menu, onClose}) {
       <Link to="/collections/all-products" onClick={onClose}>
         <span className="text-[16px] font-[400]">Store</span>
       </Link>
-      <Link to="/collections/galactic" onClick={onClose}>
+      {/* <Link to="/collections/galactic" onClick={onClose}>
         <span className="text-[16px] font-[400]">Galactic Alliances</span>
-      </Link>
+      </Link> */}
       <Link to="/calendar" onClick={onClose}>
         <div className="">
           {/* <img src="/svg/calender.svg" alt="Calender" /> */}
@@ -301,27 +301,16 @@ function MobileHeader({isHome, openCart, openMenu}) {
 }
 
 function DesktopHeader({isHome, openCart}) {
-  const [visible, setVisible] = useState(false);
+  const [open, setOpen] = useState('');
 
-  const handleToggle = () => {
-    setVisible((current) => !current);
+  const handleToggle = (key) => {
+    setOpen(key);
   };
   const {y} = useWindowScroll();
 
   const ref = useRef();
   useOutsideClick(ref, () => {
-    setVisible(false);
-  });
-  const [show, setShow] = useState(false);
-
-  const handleToggle1 = () => {
-    setShow((current) => !current);
-  };
-  // const {z} = useWindowScroll();
-
-  const ref1 = useRef();
-  useOutsideClick(ref1, () => {
-    setShow(false);
+    setOpen(false);
   });
 
   return (
@@ -350,7 +339,7 @@ function DesktopHeader({isHome, openCart}) {
           </Zoom>
           <Zoom>
             {/* setCheck(prevCheck => !prevCheck); */}
-            <button onClick={handleToggle}>
+            <button onClick={() => handleToggle('Store')}>
               <span className="text-[12px]">Store</span>
             </button>
           </Zoom>
@@ -363,9 +352,14 @@ function DesktopHeader({isHome, openCart}) {
             {/* <Link to="/collections/galactic">
               <span className="text-[12px]">Galactic Alliances</span>
             </Link> */}
-            <button onClick={handleToggle1}>
+            <button onClick={() => handleToggle('Galactic Alliances')}>
               <span className="text-[12px]">Galactic Alliances</span>
             </button>
+          </Zoom>
+          <Zoom>
+            <Link to="/journal">
+              <span className="text-[12px]">Blog</span>
+            </Link>
           </Zoom>
         </div>
 
@@ -403,7 +397,7 @@ function DesktopHeader({isHome, openCart}) {
         </div>
         {/* </Zoom> */}
       </header>
-      {visible ? (
+      {open === 'Store' ? (
         <div
           ref={ref}
           className="shadow-lg z-[999] bg-white py-[10px] w-[100%] px-[200px] flex justify-center items-center m-auto gap-[50px] absolute top-[80px] transition-all"
@@ -470,12 +464,12 @@ function DesktopHeader({isHome, openCart}) {
           </Link>
         </div>
       ) : null}
-      {show ? (
+      {open === 'Galactic Alliances' ? (
         <div
-          ref={ref1}
+          ref={ref}
           className="shadow-lg z-[999] bg-white py-[10px] w-[100%] px-[200px] flex justify-center items-center m-auto gap-[50px] absolute top-[80px] transition-all"
         >
-          <Link to="/collections/earth-tuned" onClick={handleToggle1}>
+          <Link to="/collections/earth-tuned" onClick={handleToggle}>
             <div className="flex gap-[8px] items-center hover:bg-[#EDB311] rounded-[30px] justify-center px-[24px] py-[12px] transition-all hover:transition-all">
               <img
                 src="/svg/earth.svg"
@@ -485,7 +479,7 @@ function DesktopHeader({isHome, openCart}) {
               <h1 className="text-[12px] font-[500] text-black">Earth Tuned</h1>
             </div>
           </Link>
-          <Link to="/collections/crystal-current" onClick={handleToggle1}>
+          <Link to="/collections/crystal-current" onClick={handleToggle}>
             <div className="flex gap-[8px] items-center hover:bg-[#EDB311] rounded-[30px] justify-center px-[24px] py-[12px] transition-all hover:transition-all">
               <img
                 src="/svg/crystal.svg"
@@ -497,7 +491,7 @@ function DesktopHeader({isHome, openCart}) {
               </h1>
             </div>
           </Link>
-          <Link to="/collections/darlan-loureiro" onClick={handleToggle1}>
+          <Link to="/collections/darlan-loureiro" onClick={handleToggle}>
             <div className="flex gap-[8px] hover:bg-[#EDB311] items-center rounded-[30px] justify-center px-[24px] py-[12px] transition-all hover:transition-all">
               <img
                 src="/svg/darlan.svg"

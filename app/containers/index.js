@@ -2,6 +2,7 @@ export {Banner} from './home/banner.client';
 export {Features} from './home/features.client';
 export {Event} from './home/events.client';
 export {Cards} from './home/cards.client';
+export {Explore} from './home/explore.client';
 
 //policies
 export {PolicyHeader} from './policies';
