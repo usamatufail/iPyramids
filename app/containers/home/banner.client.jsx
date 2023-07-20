@@ -100,22 +100,30 @@ export const Banner = () => {
 
           <div className="lg:hidden grid grid-cols-4 max-w-[700px] gap-[4px] mx-auto">
             <img
-              src="https://res.cloudinary.com/dfy77jd7z/image/upload/v1687130627/ezgif.com-optimize_wyj10g.gif"
+              src="https://cdn.shopify.com/s/files/1/0771/2768/0277/files/ezgif.com-video-to-gif_6.gif"
+              // src="https://res.cloudinary.com/dfy77jd7z/image/upload/v1687130627/ezgif.com-optimize_wyj10g.gif"
+
               alt="green itorus"
               className="w-full h-auto"
             />
             <img
-              src="https://res.cloudinary.com/dfy77jd7z/image/upload/v1687131160/ezgif.com-optimize_1_q93amt.gif"
+              src="https://cdn.shopify.com/s/files/1/0771/2768/0277/files/ezgif.com-video-to-gif_7.gif"
+              // src="https://res.cloudinary.com/dfy77jd7z/image/upload/v1687131160/ezgif.com-optimize_1_q93amt.gif"
+
               alt="green itorus"
               className="w-full h-auto"
             />
             <img
-              src="https://res.cloudinary.com/dfy77jd7z/image/upload/v1687131335/ezgif.com-optimize_3_qxez8y.gif"
+              src="https://cdn.shopify.com/s/files/1/0771/2768/0277/files/ezgif.com-video-to-gif_8.gif"
+              // src="https://res.cloudinary.com/dfy77jd7z/image/upload/v1687131335/ezgif.com-optimize_3_qxez8y.gif"
+
               alt="green itorus"
               className="w-full h-auto"
             />
             <img
-              src="https://res.cloudinary.com/dfy77jd7z/image/upload/v1687131442/ezgif.com-optimize_4_rw4moq.gif"
+              src="https://cdn.shopify.com/s/files/1/0771/2768/0277/files/ezgif.com-video-to-gif_9.gif"
+              // src="https://res.cloudinary.com/dfy77jd7z/image/upload/v1687131442/ezgif.com-optimize_4_rw4moq.gif"
+
               alt="green itorus"
               className="w-full h-auto"
             />
