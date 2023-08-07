@@ -31,8 +31,8 @@ export const Banner = () => {
               className="w-[250px] lg:w-[500px]"
             >
               <source
-                // src="https://cdn.shopify.com/videos/c/o/v/121bcb4978004bbb8c65ffe3940aa2c1.mov"
-                src="https://cdn.shopify.com/videos/c/o/v/7914795c9fa84ba3a9b670a417663bc8.mov"
+                src="https://cdn.shopify.com/videos/c/o/v/23e073182d634398a639788e5279aa1c.mov"
+                // src="https://cdn.shopify.com/videos/c/o/v/7914795c9fa84ba3a9b670a417663bc8.mov"
                 type='video/mp4; codecs="hvc1"'
               ></source>
               <source
@@ -50,7 +50,7 @@ export const Banner = () => {
               className="w-[250px] lg:w-[500px]"
             >
               <source
-                src="https://cdn.shopify.com/videos/c/o/v/043604247e9e4d30aec8bedaa7955d33.mov"
+                src="https://cdn.shopify.com/videos/c/o/v/4d2369e10ced468694ce6d3442d66de6.mov"
                 type='video/mp4; codecs="hvc1"'
               ></source>
               <source
@@ -69,7 +69,7 @@ export const Banner = () => {
               className="w-[250px] lg:w-[500px]"
             >
               <source
-                src="https://cdn.shopify.com/videos/c/o/v/689278e77ed2484194f3f75d0dc96cda.mov"
+                src="https://cdn.shopify.com/videos/c/o/v/a4d8776e0d1b4c6792a0d35401d3a4d3.mov"
                 type='video/mp4; codecs="hvc1"'
               ></source>
               <source
@@ -87,7 +87,7 @@ export const Banner = () => {
               className="w-[250px] lg:w-[500px]"
             >
               <source
-                src="https://cdn.shopify.com/videos/c/o/v/5d55d268345841ac93257bb6c87a15ff.mov"
+                src="https://cdn.shopify.com/videos/c/o/v/6c94b85c869d488e8da51f540cd9fb43.mov"
                 type='video/mp4; codecs="hvc1"'
               ></source>
               <source
