@@ -17,7 +17,9 @@ export const Cards = () => {
             heading="iTorus 9"
             to="/products/itorus-9-9-5-tachyon-vortex-pemf-5-0"
             video="https://res.cloudinary.com/dfy77jd7z/video/upload/v1689806188/iTorus/green0001-0240_nvusas.webm"
+            // video="https://res.cloudinary.com/dfy77jd7z/video/upload/v1689806188/iTorus/green0001-0240_nvusas.webm"
             video1="https://cdn.shopify.com/videos/c/o/v/a4d8776e0d1b4c6792a0d35401d3a4d3.mov"
+            src="https://cdn.shopify.com/s/files/1/0771/2768/0277/files/ezgif.com-video-to-gif_8.gif"
           />
         </Zoom>
         <Zoom>
@@ -34,6 +36,7 @@ export const Cards = () => {
             to="/products/itorus-2-mini-2-8-tachyon-vortex-pemf-4-0"
             video="https://res.cloudinary.com/dfy77jd7z/video/upload/v1689806158/iTorus/blue0001-0240_x6kl5o.webm"
             video1="https://cdn.shopify.com/videos/c/o/v/23e073182d634398a639788e5279aa1c.mov"
+            src="https://cdn.shopify.com/s/files/1/0771/2768/0277/files/ezgif.com-video-to-gif_6.gif"
           />
         </Zoom>
       </div>
@@ -43,27 +46,29 @@ export const Cards = () => {
 
 const Card1 = ({image, video, heading, to, video1}) => {
   return (
-    <div className="max-h-[310px] flex flex-col items-center justify-center gap-[17px] bg-[black] px-[10px] md:px-[50px] py-[20px] md:py-[32px] h-[270px] md:h-[unset]">
+    <div className="max-h-[310px] flex flex-col items-center justify-center gap-[17px] bg-[white] md:bg-[black] px-[10px] md:px-[50px] py-[20px] md:py-[32px] h-[270px] md:h-[unset]">
       <Zoom>
         {video || video1 ? (
-          <video
-            width="100%"
-            height="100%"
-            autoPlay
-            loop
-            muted
-            className="w-[120px] lg:w-[120px] "
-          >
-            <source src={video1} type='video/mp4; codecs="hvc1"' />
-            <source src={video} type="video/mp4" />
-          </video>
+          <>
+            <video
+              width="100%"
+              height="100%"
+              autoPlay
+              loop
+              muted
+              className="w-[120px] lg:w-[120px] "
+            >
+              <source src={video1} type='video/mp4; codecs="hvc1"' />
+              <source src={video} type="video/mp4" />
+            </video>
+          </>
         ) : (
           <img src={image} alt={heading} className="object-contain h-[150px]" />
         )}
       </Zoom>
       <div className="flex flex-col gap-[7px] justify-center items-center">
         <Animate>
-          <h1 className="text-[16px] md:text-[28px] font-[700] text-white text-center ">
+          <h1 className="text-[16px] md:text-[28px] font-[700] text-[#000] md:text-white text-center ">
             {heading}
           </h1>
         </Animate>
@@ -77,12 +82,12 @@ const Card1 = ({image, video, heading, to, video1}) => {
   );
 };
 
-const Card2 = ({video, image, heading, to, video1}) => {
+const Card2 = ({video, image, heading, to, video1, src}) => {
   return (
-    <div className="max-h-[310px] flex flex-col items-center justify-center gap-[17px] bg-[#FBFAFE] px-[10px] md:px-[50px] py-[20px] md:py-[32px] h-[270px] md:h-[unset]">
+    <div className="max-h-[310px] flex flex-col items-center justify-center gap-[17px] bg-[#000] md:bg-[#FBFAFE] px-[10px] md:px-[50px] py-[20px] md:py-[32px] h-[270px] md:h-[unset]">
       <div className="flex flex-col gap-[7px] justify-center items-center">
         <Animate>
-          <h1 className="text-[16px] md:text-[28px] font-[700] text-black text-center">
+          <h1 className="text-[16px] md:text-[28px] font-[700] text-white md:text-black text-center">
             {heading}
           </h1>
         </Animate>
@@ -93,18 +98,23 @@ const Card2 = ({video, image, heading, to, video1}) => {
         </Animate>
       </div>
       <Zoom>
-        {video || video1 ? (
-          <video
-            width="280"
-            height="100%"
-            autoPlay
-            loop
-            muted
-            className="w-[120px] lg:w-[120px] "
-          >
-            <source src={video1} type='video/mp4; codecs="hvc1"' />
-            <source src={video} type="video/mp4" />
-          </video>
+        {video || video1 || src ? (
+          <>
+            <video
+              width="280"
+              height="100%"
+              autoPlay
+              loop
+              muted
+              className="w-[120px] hidden md:block  "
+            >
+              <source src={video1} type='video/mp4; codecs="hvc1"' />
+              <source src={video} type="video/mp4" />
+            </video>
+            <div className="block md:hidden ">
+              <img src={src} alt="green itorus" className="w-[120px] h-auto" />
+            </div>
+          </>
         ) : (
           <img src={image} alt={heading} className="object-contain h-[150px]" />
         )}
