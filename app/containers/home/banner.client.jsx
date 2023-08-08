@@ -1,8 +1,4 @@
 import {Animate, CustomButton, Link, Zoom} from '~/components';
-// import green from '../../animations/g.json';
-// import lightblue from '../../animations/l.json';
-// import purple from '../../animations/pur.json';
-// import pearl from '../../animations/p.json';
 
 export const Banner = () => {
   return (
@@ -32,12 +28,10 @@ export const Banner = () => {
             >
               <source
                 src="https://cdn.shopify.com/videos/c/o/v/23e073182d634398a639788e5279aa1c.mov"
-                // src="https://cdn.shopify.com/videos/c/o/v/7914795c9fa84ba3a9b670a417663bc8.mov"
                 type='video/mp4; codecs="hvc1"'
               ></source>
               <source
                 src="https://res.cloudinary.com/dfy77jd7z/video/upload/v1689806158/iTorus/blue0001-0240_x6kl5o.webm"
-                // src="https://res.cloudinary.com/dfy77jd7z/video/upload/v1687129985/green_jefb2r.webm"
                 type="video/mp4"
               />
             </video>
@@ -55,8 +49,6 @@ export const Banner = () => {
               ></source>
               <source
                 src="https://res.cloudinary.com/dfy77jd7z/video/upload/v1689806175/iTorus/cream0241-0480_saz6hc.webm"
-                // src="https://res.cloudinary.com/dfy77jd7z/video/upload/v1687130002/light-blue_p7ad8a.webm"
-
                 type="video/mp4"
               />
             </video>
@@ -74,7 +66,6 @@ export const Banner = () => {
               ></source>
               <source
                 src="https://res.cloudinary.com/dfy77jd7z/video/upload/v1689806188/iTorus/green0001-0240_nvusas.webm"
-                // src="https://res.cloudinary.com/dfy77jd7z/video/upload/v1687130005/pearl_tge5ps.webm"
                 type="video/mp4"
               />
             </video>
@@ -92,7 +83,6 @@ export const Banner = () => {
               ></source>
               <source
                 src="https://res.cloudinary.com/dfy77jd7z/video/upload/v1689806201/iTorus/purple0001-0240_fawidw.webm"
-                // src="https://res.cloudinary.com/dfy77jd7z/video/upload/v1687130010/purple_m8vyq3.webm"
                 type="video/mp4"
               />
             </video>
@@ -101,29 +91,21 @@ export const Banner = () => {
           <div className="lg:hidden grid grid-cols-4 max-w-[700px] gap-[4px] mx-auto">
             <img
               src="https://cdn.shopify.com/s/files/1/0771/2768/0277/files/ezgif.com-video-to-gif_6.gif"
-              // src="https://res.cloudinary.com/dfy77jd7z/image/upload/v1687130627/ezgif.com-optimize_wyj10g.gif"
-
               alt="green itorus"
               className="w-full h-auto"
             />
             <img
               src="https://cdn.shopify.com/s/files/1/0771/2768/0277/files/ezgif.com-video-to-gif_7.gif"
-              // src="https://res.cloudinary.com/dfy77jd7z/image/upload/v1687131160/ezgif.com-optimize_1_q93amt.gif"
-
               alt="green itorus"
               className="w-full h-auto"
             />
             <img
               src="https://cdn.shopify.com/s/files/1/0771/2768/0277/files/ezgif.com-video-to-gif_8.gif"
-              // src="https://res.cloudinary.com/dfy77jd7z/image/upload/v1687131335/ezgif.com-optimize_3_qxez8y.gif"
-
               alt="green itorus"
               className="w-full h-auto"
             />
             <img
               src="https://cdn.shopify.com/s/files/1/0771/2768/0277/files/ezgif.com-video-to-gif_9.gif"
-              // src="https://res.cloudinary.com/dfy77jd7z/image/upload/v1687131442/ezgif.com-optimize_4_rw4moq.gif"
-
               alt="green itorus"
               className="w-full h-auto"
             />

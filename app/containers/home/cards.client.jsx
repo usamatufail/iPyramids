@@ -16,7 +16,8 @@ export const Cards = () => {
             image="/home/card3.png"
             heading="iTorus 9"
             to="/products/itorus-9-9-5-tachyon-vortex-pemf-5-0"
-            video="https://cdn.shopify.com/videos/c/o/v/8e7b7e61f2694e98b813bb57bfcad68d.mp4"
+            video="https://res.cloudinary.com/dfy77jd7z/video/upload/v1689806188/iTorus/green0001-0240_nvusas.webm"
+            video1="https://cdn.shopify.com/videos/c/o/v/a4d8776e0d1b4c6792a0d35401d3a4d3.mov"
           />
         </Zoom>
         <Zoom>
@@ -31,7 +32,8 @@ export const Cards = () => {
             image="/home/card4.png"
             heading="iTorus 2 Mini"
             to="/products/itorus-2-mini-2-8-tachyon-vortex-pemf-4-0"
-            video="https://cdn.shopify.com/videos/c/o/v/1ef20bac95e94addaab0d1b0e207c7c2.mp4"
+            video="https://res.cloudinary.com/dfy77jd7z/video/upload/v1689806158/iTorus/blue0001-0240_x6kl5o.webm"
+            video1="https://cdn.shopify.com/videos/c/o/v/23e073182d634398a639788e5279aa1c.mov"
           />
         </Zoom>
       </div>
@@ -39,19 +41,20 @@ export const Cards = () => {
   );
 };
 
-const Card1 = ({image, video, heading, to}) => {
+const Card1 = ({image, video, heading, to, video1}) => {
   return (
     <div className="max-h-[310px] flex flex-col items-center justify-center gap-[17px] bg-[black] px-[10px] md:px-[50px] py-[20px] md:py-[32px] h-[270px] md:h-[unset]">
       <Zoom>
-        {video ? (
+        {video || video1 ? (
           <video
-            width="300"
+            width="100%"
             height="100%"
             autoPlay
             loop
             muted
-            className="mt-[-10px]"
+            className="w-[120px] lg:w-[120px] "
           >
+            <source src={video1} type='video/mp4; codecs="hvc1"' />
             <source src={video} type="video/mp4" />
           </video>
         ) : (
@@ -74,7 +77,7 @@ const Card1 = ({image, video, heading, to}) => {
   );
 };
 
-const Card2 = ({video, image, heading, to}) => {
+const Card2 = ({video, image, heading, to, video1}) => {
   return (
     <div className="max-h-[310px] flex flex-col items-center justify-center gap-[17px] bg-[#FBFAFE] px-[10px] md:px-[50px] py-[20px] md:py-[32px] h-[270px] md:h-[unset]">
       <div className="flex flex-col gap-[7px] justify-center items-center">
@@ -90,16 +93,16 @@ const Card2 = ({video, image, heading, to}) => {
         </Animate>
       </div>
       <Zoom>
-        {/* <img src={image} alt={heading} className="object-contain h-[150px]" /> */}
-        {video ? (
+        {video || video1 ? (
           <video
             width="280"
             height="100%"
             autoPlay
             loop
             muted
-            className="mt-[-10px]"
+            className="w-[120px] lg:w-[120px] "
           >
+            <source src={video1} type='video/mp4; codecs="hvc1"' />
             <source src={video} type="video/mp4" />
           </video>
         ) : (
