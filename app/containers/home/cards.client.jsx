@@ -46,7 +46,7 @@ export const Cards = () => {
 
 const Card1 = ({image, video, heading, to, video1}) => {
   return (
-    <div className="max-h-[310px] flex flex-col items-center justify-center gap-[17px] bg-[white] md:bg-[black] px-[10px] md:px-[50px] py-[20px] md:py-[32px] h-[270px] md:h-[unset]">
+    <div className="max-h-[310px] flex flex-col items-center justify-center gap-[17px] bg-[#FBFAFE] md:bg-[black] px-[10px] md:px-[50px] py-[20px] md:py-[32px] h-[270px] md:h-[unset]">
       <Zoom>
         {video || video1 ? (
           <>
