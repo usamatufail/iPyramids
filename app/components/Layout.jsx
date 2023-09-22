@@ -31,10 +31,10 @@ export function Layout({children, layout}) {
             Skip to content
           </a>
         </div>
-        <Header
+        {/* <Header
           title={layout?.shop.name ?? 'iPyraminds'}
           menu={layout?.headerMenu}
-        />
+        /> */}
         <main
           role="main"
           id="mainContent"
@@ -43,7 +43,7 @@ export function Layout({children, layout}) {
           {children}
         </main>
       </div>
-      <Footerr />
+      {/* <Footerr /> */}
     </>
   );
 }
