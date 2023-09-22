@@ -1,6 +1,6 @@
 export default function Home() {
   return (
-    <div className="w-screen h-screen flex text-center items-center flex-col gap-4 justify-center bg-[#d6433b] text-white">
+    <div className="px-2 py-5 w-screen md:h-screen flex text-center items-center flex-col gap-4 justify-center bg-[#d6433b] text-white">
       <div className="max-w-[800px] mx-auto">
         <h1 className="text-[40px] uppercase font-bold">
           Site is under Maintenance
